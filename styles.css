@@ -61,7 +61,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);ov
 .hero-divider{width:1px;background:rgba(255,255,255,.12);align-self:stretch;}
 
 /* ─── PAGE HERO ─── */
-.page-hero{background:linear-gradient(140deg,var(--forest) 0%,var(--emerald) 100%);padding:56px 48px 48px;position:relative;overflow:hidden;}
+.page-hero{background:linear-gradient(140deg,var(--forest) 0%,var(--emerald) 100%);padding:80px 48px 56px;position:relative;overflow:hidden;}
 .page-hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;}
 .page-hero-inner{position:relative;z-index:1;max-width:680px;}
 .page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);color:white;font-weight:700;margin-bottom:10px;}
@@ -238,7 +238,7 @@ footer{background:var(--forest);padding:52px 40px 24px;border-top:1px solid rgba
   .form-card{padding:28px 20px;}
   .about-wrap{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:22px;}
-  .page-hero{padding:36px 20px 32px;}
+  .page-hero{padding:64px 20px 40px;}
   .schedule-box{padding:36px 20px;}
   .hero-stats{gap:20px;}
   .schedule-btns{flex-direction:column;align-items:center;}
