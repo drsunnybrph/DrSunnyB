@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pay | Dr. Sunny B | Venmo, Zelle, Square, CashApp @drsunnybrph</title>
+<meta name="description" content="Secure payment options for Dr. Sunny B consulting services. Pay via Venmo, Zelle, Square, or CashApp. Handle: @drsunnybrph. Invoices available on request."/>
+<meta name="keywords" content="pay Dr Sunny B, drsunnybrph Venmo, drsunnybrph Zelle, pharmacist consultation payment"/>
+<meta property="og:title" content="Pay | Dr. Sunny B | @drsunnybrph"/>
+<meta property="og:description" content="Pay via Venmo, Zelle, Square, or CashApp @drsunnybrph. Invoices available on request."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://drsunnybrph.com/pay.html"/>
+<link rel="canonical" href="https://drsunnybrph.com/pay.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-brand-icon"><i class="fa-solid fa-pills"></i></div>
+    <div class="nav-brand-text">Dr. <span>Sunny B</span></div>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+    <li class="nav-item" id="ddServices">
+      <button class="nav-link" data-nav="services" onclick="toggleDropdown('ddServices')">Services <span class="chevron">▾</span></button>
+      <div class="dropdown">
+        <a class="dropdown-item" href="travel-health.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-plane-departure"></i></div><div><strong>Travel Health</strong><small>Virtual consults</small></div></a>
+        <a class="dropdown-item" href="supplements.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-leaf"></i></div><div><strong>Supplement Consults</strong><small>OTC &amp; nutraceuticals</small></div></a>
+        <a class="dropdown-item" href="web-consulting.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Web Consulting</strong><small>Sites &amp; strategy</small></div></a>
+        <a class="dropdown-item" href="retainer.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-clipboard-list"></i></div><div><strong>Retainer Plans</strong><small>Monthly support</small></div></a>
+        <a class="dropdown-item" href="resources.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-book-medical"></i></div><div><strong>Resources</strong><small>EMR &amp; CPA guides</small></div></a>
+      </div>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
+    <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow"><i class="fa-solid fa-credit-card"></i> Payments</span>
+      <h1>Secure <em>Payments</em></h1>
+      <p>Pay via your preferred method. All transactions handled through @drsunnybrph. Invoices available on request.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">Payment Methods</span>
+        <h2 class="section-title">Pay Your <em>Way</em></h2>
+        <p class="section-sub">Reference your service name in the payment memo. Confirmation sent by email.</p>
+      </div>
+      <div class="pay-grid">
+        <div class="pay-card">
+          <div class="pay-logo"><i class="fa-solid fa-money-bill-transfer" style="color:#008CFF;"></i></div>
+          <h3>Venmo</h3>
+          <span class="pay-handle">@drsunnybrph</span>
+          <p>Send directly in the app. Include your name and service in the memo. Free for personal transfers.</p>
+          <a href="https://venmo.com/drsunnybrph" target="_blank" class="pay-btn" style="background:linear-gradient(135deg,#008CFF,#005FCC);"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Venmo</a>
+        </div>
+        <div class="pay-card">
+          <div class="pay-logo"><i class="fa-solid fa-bolt" style="color:#6B1BE3;"></i></div>
+          <h3>Zelle</h3>
+          <span class="pay-handle">@drsunnybrph</span>
+          <p>Bank-to-bank, zero fees. Open your bank's app, search by handle, and send. Fastest option for most clients.</p>
+          <button class="copy-btn" id="zelleBtn" onclick="copyToClipboard('drsunnybrph','zelleBtn')">
+            <i class="fa-solid fa-copy"></i> Copy Handle
+          </button>
+        </div>
+        <div class="pay-card">
+          <div class="pay-logo"><i class="fa-solid fa-credit-card" style="color:#1A1A1A;"></i></div>
+          <h3>Square</h3>
+          <span class="pay-handle">Dr. Sunny B Consulting</span>
+          <p>Credit or debit card accepted. A 2.6% processing fee applies. Invoice sent before payment link.</p>
+          <a href="https://squareup.com/pay/drsunnyb" target="_blank" class="pay-btn" style="background:linear-gradient(135deg,#1A1A1A,#333);"><i class="fa-solid fa-arrow-up-right-from-square"></i> Pay via Square</a>
+        </div>
+        <div class="pay-card">
+          <div class="pay-logo"><i class="fa-solid fa-dollar-sign" style="color:#00C244;"></i></div>
+          <h3>CashApp</h3>
+          <span class="pay-handle">$drsunnybrph</span>
+          <p>Quick and easy. Free for personal transfers. Include service in the note field.</p>
+          <a href="https://cash.app/$drsunnybrph" target="_blank" class="pay-btn" style="background:linear-gradient(135deg,#00C244,#009E34);"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open CashApp</a>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:36px;"><p><i class="fa-solid fa-lightbulb"></i><span><strong>Payment Policy:</strong> Clinical consultations require a <strong>50% deposit at booking</strong>. Full payment before Zoom link is sent. Web projects under $300 require <strong>full payment upfront</strong>. Larger projects split 50/50. Invoices on request.</span></p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
+      <div class="footer-col"><h4>Clinical</h4><ul><li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li><li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li><li><a href="resources.html"><i class="fa-solid fa-book-medical"></i>EMR Resources</a></li><li><a href="resources.html"><i class="fa-solid fa-file-contract"></i>CPA Resources</a></li></ul></div>
+      <div class="footer-col"><h4>Digital</h4><ul><li><a href="web-consulting.html"><i class="fa-solid fa-laptop-code"></i>Web Consulting</a></li><li><a href="retainer.html"><i class="fa-solid fa-gear"></i>Retainer Plans</a></li><li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About</a></li></ul></div>
+      <div class="footer-col"><h4>Book &amp; Pay</h4><ul><li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book Appointment</a></li><li><a href="pay.html"><i class="fa-solid fa-credit-card"></i>Pay Now</a></li><li><a href="pay.html"><i class="fa-solid fa-at"></i>@drsunnybrph</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services under CA Board of Pharmacy license. CPA required for expanded scope. Not a substitute for emergency care.</div>
+      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

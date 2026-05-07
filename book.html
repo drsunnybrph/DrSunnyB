@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book a Consultation | Dr. Sunny B PharmD | Virtual Appointments</title>
+<meta name="description" content="Schedule a virtual consultation with Dr. Sunny B PharmD. Travel health, supplement, or web consulting appointments available online via Cal.com."/>
+<meta name="keywords" content="book pharmacist consultation, virtual pharmacist appointment, travel health booking, supplement consult booking, Dr Sunny B appointment"/>
+<meta property="og:title" content="Book a Consultation | Dr. Sunny B PharmD"/>
+<meta property="og:description" content="Schedule your virtual consultation with Dr. Sunny B. Travel health, supplements, or web consulting."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://drsunnybrph.com/book.html"/>
+<link rel="canonical" href="https://drsunnybrph.com/book.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-brand-icon"><i class="fa-solid fa-pills"></i></div>
+    <div class="nav-brand-text">Dr. <span>Sunny B</span></div>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+    <li class="nav-item" id="ddServices">
+      <button class="nav-link" data-nav="services" onclick="toggleDropdown('ddServices')">Services <span class="chevron">▾</span></button>
+      <div class="dropdown">
+        <a class="dropdown-item" href="travel-health.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-plane-departure"></i></div><div><strong>Travel Health</strong><small>Virtual consults</small></div></a>
+        <a class="dropdown-item" href="supplements.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-leaf"></i></div><div><strong>Supplement Consults</strong><small>OTC &amp; nutraceuticals</small></div></a>
+        <a class="dropdown-item" href="web-consulting.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Web Consulting</strong><small>Sites &amp; strategy</small></div></a>
+        <a class="dropdown-item" href="retainer.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-clipboard-list"></i></div><div><strong>Retainer Plans</strong><small>Monthly support</small></div></a>
+        <a class="dropdown-item" href="resources.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-book-medical"></i></div><div><strong>Resources</strong><small>EMR &amp; CPA guides</small></div></a>
+      </div>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
+    <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Scheduling</span>
+      <h1>Book Your <em>Appointment</em></h1>
+      <p>All consultations are virtual via Zoom. Pick a service and a time — automated confirmations and Zoom links sent immediately.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="schedule-box">
+        <h2>Ready to Get <em>Started?</em></h2>
+        <p>Open the scheduling portal, pick your service, choose a time, and complete your intake form.</p>
+        <div class="schedule-btns">
+          <a href="https://cal.com/drsunnyb" target="_blank" class="btn-orange"><i class="fa-solid fa-calendar-check"></i> Open Scheduling Portal</a>
+          <a href="travel-health.html" class="btn-ghost-white"><i class="fa-solid fa-plane-departure"></i> Travel Health Intake</a>
+          <a href="supplements.html" class="btn-ghost-white"><i class="fa-solid fa-leaf"></i> Supplement Intake</a>
+        </div>
+      </div>
+
+      <div style="margin-top:56px;">
+        <span class="eyebrow">Service Menu</span>
+        <h2 class="section-title">Choose Your <em>Consultation</em></h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            <h3>Travel Health Standard</h3><div class="price-amount">$75<span>/30 min</span></div>
+            <p class="price-desc">Single destination pre-travel consult.</p>
+            <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+          <div class="price-card featured">
+            <div class="featured-badge">Most Booked</div>
+            <div class="price-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <h3>Travel Comprehensive</h3><div class="price-amount">$125<span>/60 min</span></div>
+            <p class="price-desc">Multi-destination + prescription coordination.</p>
+            <a class="btn-cta" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+          <div class="price-card">
+            <div class="price-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Supplement Audit</h3><div class="price-amount">$95<span>/45 min</span></div>
+            <p class="price-desc">Full supplement stack review and action plan.</p>
+            <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          </div>
+          <div class="price-card">
+            <div class="price-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Web Consult Call</h3><div class="price-amount">Free<span>/30 min</span></div>
+            <p class="price-desc">Intro call to discuss your website project.</p>
+            <a class="btn-slate" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Free Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
+      <div class="footer-col"><h4>Clinical</h4><ul><li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li><li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li><li><a href="resources.html"><i class="fa-solid fa-book-medical"></i>EMR Resources</a></li><li><a href="resources.html"><i class="fa-solid fa-file-contract"></i>CPA Resources</a></li></ul></div>
+      <div class="footer-col"><h4>Digital</h4><ul><li><a href="web-consulting.html"><i class="fa-solid fa-laptop-code"></i>Web Consulting</a></li><li><a href="retainer.html"><i class="fa-solid fa-gear"></i>Retainer Plans</a></li><li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About</a></li></ul></div>
+      <div class="footer-col"><h4>Book &amp; Pay</h4><ul><li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book Appointment</a></li><li><a href="pay.html"><i class="fa-solid fa-credit-card"></i>Pay Now</a></li><li><a href="pay.html"><i class="fa-solid fa-at"></i>@drsunnybrph</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services under CA Board of Pharmacy license. CPA required for expanded scope. Not a substitute for emergency care.</div>
+      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

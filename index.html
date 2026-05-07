@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dr. Sunny B | PharmD Clinical Consultant & Digital Strategist | California</title>
+<meta name="description" content="Board-licensed emergency medicine pharmacist offering virtual travel health consultations, supplement guidance, and web consulting services in California."/>
+<meta name="keywords" content="pharmacist consultant California, travel health pharmacist, supplement consultation, PharmD telehealth, Dr Sunny B"/>
+<meta property="og:title" content="Dr. Sunny B | PharmD Clinical Consultant"/>
+<meta property="og:description" content="Doctorate-level clinical consulting and digital strategy from a licensed California pharmacist."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://drsunnybrph.com/"/>
+<link rel="canonical" href="https://drsunnybrph.com/"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-brand-icon"><i class="fa-solid fa-pills"></i></div>
+    <div class="nav-brand-text">Dr. <span>Sunny B</span></div>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
+    <li class="nav-item" id="ddServices">
+      <button class="nav-link" data-nav="services" onclick="toggleDropdown('ddServices')">Services <span class="chevron">▾</span></button>
+      <div class="dropdown">
+        <a class="dropdown-item" href="travel-health.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-plane-departure"></i></div><div><strong>Travel Health</strong><small>Virtual consults</small></div></a>
+        <a class="dropdown-item" href="supplements.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-leaf"></i></div><div><strong>Supplement Consults</strong><small>OTC & nutraceuticals</small></div></a>
+        <a class="dropdown-item" href="web-consulting.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Web Consulting</strong><small>Sites & strategy</small></div></a>
+        <a class="dropdown-item" href="retainer.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-clipboard-list"></i></div><div><strong>Retainer Plans</strong><small>Monthly support</small></div></a>
+        <a class="dropdown-item" href="resources.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-book-medical"></i></div><div><strong>Resources</strong><small>EMR & CPA guides</small></div></a>
+      </div>
+    </li>
+    <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
+    <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<main>
+  <div class="hero">
+    <div class="hero-dots"></div><div class="hero-glow"></div><div class="hero-glow2"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><i class="fa-solid fa-pills"></i> PharmD · Clinical Consultant · Digital Strategist</div>
+      <h1>Healing Patients.<br/>Building Brands.<br/><em>Dr. Sunny B.</em></h1>
+      <p class="hero-desc">Board-licensed emergency medicine pharmacist offering virtual travel health consultations, supplement guidance, and digital consulting services — all under one trusted brand.</p>
+      <div class="hero-btns">
+        <a class="btn-orange" href="book.html"><i class="fa-solid fa-calendar-check"></i> Book a Consultation</a>
+        <a class="btn-ghost-white" href="about.html">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num">PharmD</span><span class="hero-stat-label">Doctorate</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hero-stat-num">EM</span><span class="hero-stat-label">Emergency Medicine</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hero-stat-num">CA</span><span class="hero-stat-label">Licensed Pharmacist</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hero-stat-num"><i class="fa-solid fa-plane-departure"></i></span><span class="hero-stat-label">Travel Health</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding:60px 40px;">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">What I Do</span>
+        <h2 class="section-title">A Brand Built to <em>Serve</em></h2>
+        <p class="section-sub">From clinical consultations to digital strategy — doctorate-level expertise at your service.</p>
+      </div>
+      <div class="cards-grid">
+        <a class="card" href="travel-health.html" style="text-decoration:none;"><div class="card-icon ci-green"><i class="fa-solid fa-plane-departure"></i></div><h3>Travel Health Consults</h3><p>Virtual Zoom appointments for pre-travel health planning, vaccines, prophylaxis, and destination-specific risk under CPA with supervising physician.</p><span class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="card" href="supplements.html" style="text-decoration:none;"><div class="card-icon ci-green"><i class="fa-solid fa-leaf"></i></div><h3>Supplement Consultations</h3><p>Evidence-based OTC and nutraceutical counseling. Interactions, dosing, and personalized recommendations from a clinical pharmacist.</p><span class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="card" href="web-consulting.html" style="text-decoration:none;"><div class="card-icon ci-slate"><i class="fa-solid fa-laptop-code"></i></div><h3>Web & Digital Consulting</h3><p>Professional websites built same-day. Booking integrations, payment systems, bilingual builds, and ongoing retainer support.</p><span class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="card" href="retainer.html" style="text-decoration:none;"><div class="card-icon ci-orange"><i class="fa-solid fa-clipboard-list"></i></div><h3>Retainer Plans</h3><p>Monthly web maintenance or clinical advisory partnerships for consistent expert support.</p><span class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="card" href="book.html" style="text-decoration:none;"><div class="card-icon ci-green"><i class="fa-solid fa-calendar-check"></i></div><h3>Book an Appointment</h3><p>Schedule any consultation online. Automated reminders, Zoom links, and pre-visit intake forms sent directly to your inbox.</p><span class="card-link">Book now <i class="fa-solid fa-arrow-right"></i></span></a>
+        <a class="card" href="pay.html" style="text-decoration:none;"><div class="card-icon ci-orange"><i class="fa-solid fa-credit-card"></i></div><h3>Secure Payments</h3><p>Pay via Venmo, Zelle, Square, or CashApp. Invoices provided on request. Handle: @drsunnybrph</p><span class="card-link">Pay now <i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
+      <div class="footer-col"><h4>Clinical</h4><ul><li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li><li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li><li><a href="resources.html"><i class="fa-solid fa-book-medical"></i>EMR Resources</a></li><li><a href="resources.html"><i class="fa-solid fa-file-contract"></i>CPA Resources</a></li></ul></div>
+      <div class="footer-col"><h4>Digital</h4><ul><li><a href="web-consulting.html"><i class="fa-solid fa-laptop-code"></i>Web Consulting</a></li><li><a href="retainer.html"><i class="fa-solid fa-gear"></i>Retainer Plans</a></li><li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About</a></li></ul></div>
+      <div class="footer-col"><h4>Book & Pay</h4><ul><li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book Appointment</a></li><li><a href="pay.html"><i class="fa-solid fa-credit-card"></i>Pay Now</a></li><li><a href="pay.html"><i class="fa-solid fa-at"></i>@drsunnybrph</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services under CA Board of Pharmacy license. CPA required for expanded scope. Not a substitute for emergency care.</div>
+      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
