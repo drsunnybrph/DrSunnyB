@@ -3,51 +3,122 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Clinical Resources | EMR & CPA Guide for Solo Telehealth Pharmacists | Dr. Sunny B</title>
-<meta name="description" content="Best EMR platforms and CPA setup guide for solo telehealth pharmacists. Recommendations for scheduling, HIPAA-compliant video, intake forms, and Collaborative Practice Agreements in California."/>
-<meta name="keywords" content="EMR for pharmacist, telehealth pharmacist setup, CPA collaborative practice agreement California, best EMR solo pharmacist, Charm EHR Jane App pharmacist"/>
-<meta property="og:title" content="Clinical Resources | EMR & CPA Guide | Dr. Sunny B"/>
-<meta property="og:description" content="EMR recommendations and CPA setup guide for solo telehealth pharmacists in California."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://drsunnybrph.com/resources.html"/>
-<link rel="canonical" href="https://drsunnybrph.com/resources.html"/>
+<title>Resources | Dr. Sunny B — Internal</title>
+<!-- No index for search engines -->
+<meta name="robots" content="noindex, nofollow"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<style>
+/* ─── PASSWORD GATE ─── */
+#gate{
+  position:fixed;inset:0;z-index:9999;
+  background:linear-gradient(150deg,var(--forest) 0%,var(--emerald) 100%);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+}
+#gate::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.gate-box{
+  background:white;border-radius:24px;padding:48px 40px;
+  max-width:420px;width:100%;text-align:center;
+  box-shadow:0 24px 64px rgba(0,0,0,.3);
+  position:relative;z-index:1;
+}
+.gate-icon{
+  width:64px;height:64px;
+  background:linear-gradient(135deg,var(--emerald),var(--emerald3));
+  border-radius:18px;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+}
+.gate-icon i{font-size:1.8rem;color:white;}
+.gate-box h2{
+  font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;
+  color:var(--text);margin-bottom:6px;
+}
+.gate-box p{font-size:.85rem;color:var(--gray);margin-bottom:28px;line-height:1.6;}
+.gate-input-wrap{position:relative;margin-bottom:16px;}
+.gate-input-wrap input{
+  width:100%;border:2px solid var(--gray4);border-radius:12px;
+  padding:13px 48px 13px 16px;font-family:'Inter',sans-serif;
+  font-size:.95rem;color:var(--text);outline:none;
+  transition:border-color .2s;background:var(--cream);
+  letter-spacing:.15em;
+}
+.gate-input-wrap input:focus{border-color:var(--emerald3);background:white;}
+.gate-input-wrap input.error{border-color:#EF4444;animation:shake .3s ease;}
+.gate-toggle{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--gray2);cursor:pointer;
+  font-size:.9rem;padding:4px;
+}
+.gate-toggle:hover{color:var(--emerald2);}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gate-btn{
+  width:100%;background:linear-gradient(135deg,var(--emerald),var(--emerald3));
+  color:white;border:none;border-radius:50px;padding:14px;
+  font-size:.92rem;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  box-shadow:0 6px 20px rgba(5,150,105,.25);
+}
+.gate-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(5,150,105,.35);}
+.gate-error{
+  font-size:.78rem;color:#EF4444;margin-top:8px;
+  display:none;align-items:center;gap:6px;justify-content:center;
+}
+.gate-error.show{display:flex;}
+#content{display:none;}
+
+/* ─── INTERNAL PAGE STYLES ─── */
+.internal-header{
+  background:linear-gradient(140deg,var(--forest) 0%,var(--emerald) 100%);
+  padding:40px 48px 36px;position:relative;overflow:hidden;
+}
+.internal-header::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;}
+.internal-header-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;}
+.internal-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:12px;}
+.internal-header h1{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:white;font-weight:700;margin-bottom:4px;}
+.internal-header h1 em{color:var(--emerald4);font-style:italic;}
+.internal-header p{color:rgba(255,255,255,.55);font-size:.85rem;}
+.lock-out-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:50px;padding:8px 18px;font-size:.76rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px;transition:all .2s;white-space:nowrap;}
+.lock-out-btn:hover{background:rgba(255,255,255,.18);color:white;}
+</style>
 </head>
 <body>
 
-<nav class="navbar">
-  <a class="nav-brand" href="index.html">
-    <div class="nav-brand-icon"><i class="fa-solid fa-pills"></i></div>
-    <div class="nav-brand-text">Dr. <span>Sunny B</span></div>
-  </a>
-  <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
-    <li class="nav-item" id="ddServices">
-      <button class="nav-link" data-nav="services" onclick="toggleDropdown('ddServices')">Services <span class="chevron">▾</span></button>
-      <div class="dropdown">
-        <a class="dropdown-item" href="travel-health.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-plane-departure"></i></div><div><strong>Travel Health</strong><small>Virtual consults</small></div></a>
-        <a class="dropdown-item" href="supplements.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-leaf"></i></div><div><strong>Supplement Consults</strong><small>OTC &amp; nutraceuticals</small></div></a>
-        <a class="dropdown-item" href="health-coaching.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-dumbbell"></i></div><div><strong>Health Coaching</strong><small>Fitness &amp; wellness</small></div></a>
-        <a class="dropdown-item" href="web-consulting.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Web Consulting</strong><small>Sites &amp; strategy</small></div></a>
-        <a class="dropdown-item" href="retainer.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-clipboard-list"></i></div><div><strong>Retainer Plans</strong><small>Monthly support</small></div></a>
-        <a class="dropdown-item" href="resources.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-book-medical"></i></div><div><strong>Resources</strong><small>EMR &amp; CPA guides</small></div></a>
-      </div>
-    </li>
-    <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
-    <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
-    <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
-</nav>
+<!-- ══ PASSWORD GATE ══ -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-icon"><i class="fa-solid fa-lock"></i></div>
+    <h2>Private Access</h2>
+    <p>This page is for Dr. Sunny B only.<br/>Enter your password to continue.</p>
+    <div class="gate-input-wrap">
+      <input type="password" id="pwInput" placeholder="Password" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter')checkPassword()"/>
+      <button class="gate-toggle" onclick="togglePw()" id="pwToggle" aria-label="Show password">
+        <i class="fa-solid fa-eye" id="pwEyeIcon"></i>
+      </button>
+    </div>
+    <div class="gate-error" id="gateError"><i class="fa-solid fa-circle-xmark"></i> Incorrect password</div>
+    <button class="gate-btn" onclick="checkPassword()"><i class="fa-solid fa-unlock"></i> Enter</button>
+  </div>
+</div>
 
-<main>
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <span class="eyebrow"><i class="fa-solid fa-book-medical"></i> Clinical Resources</span>
-      <h1>Tools &amp; <em>Resources</em></h1>
-      <p>Recommended platforms for pharmacist-led telehealth — EMR, scheduling, HIPAA compliance, and CPA guidance.</p>
+<!-- ══ INTERNAL CONTENT ══ -->
+<div id="content">
+
+  <div class="internal-header">
+    <div class="internal-header-inner">
+      <div>
+        <div class="internal-badge"><i class="fa-solid fa-lock" style="font-size:.65rem;"></i> Internal Reference — Not Public</div>
+        <h1>Tools &amp; <em>Resources</em></h1>
+        <p>EMR comparisons, CPA setup notes, and platform recommendations. For your eyes only.</p>
+      </div>
+      <button class="lock-out-btn" onclick="lockOut()"><i class="fa-solid fa-right-from-bracket"></i> Lock Page</button>
     </div>
   </div>
 
@@ -58,54 +129,96 @@
       <p class="section-sub">Ranked by cost, telehealth capability, intake forms, and ease of solo setup.</p>
       <div class="emr-grid">
         <div class="emr-card top"><div class="emr-rec"><i class="fa-solid fa-star"></i> Top Pick</div><div class="emr-name">Jane App</div><div class="emr-price">~$54/month solo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Built-in telehealth (HD video)</li><li><i class="fa-solid fa-check"></i>Online scheduling + reminders</li><li><i class="fa-solid fa-check"></i>Custom intake forms</li><li><i class="fa-solid fa-check"></i>HIPAA-compliant portal</li><li><i class="fa-solid fa-check"></i>Invoicing + payments</li></ul></div>
-        <div class="emr-card top"><div class="emr-rec"><i class="fa-solid fa-star"></i> Best Free Option</div><div class="emr-name">Charm EHR</div><div class="emr-price">Free (solo) / $25+/mo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Free solo practice tier</li><li><i class="fa-solid fa-check"></i>Telehealth built in</li><li><i class="fa-solid fa-check"></i>Intake forms + e-signatures</li><li><i class="fa-solid fa-check"></i>Patient portal</li><li><i class="fa-solid fa-check"></i>HIPAA compliant</li></ul></div>
+        <div class="emr-card top"><div class="emr-rec"><i class="fa-solid fa-star"></i> Current Choice</div><div class="emr-name">Charm EHR</div><div class="emr-price">Free (solo) / $25+/mo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Free solo practice tier</li><li><i class="fa-solid fa-check"></i>Telehealth built in</li><li><i class="fa-solid fa-check"></i>Intake forms + e-signatures</li><li><i class="fa-solid fa-check"></i>Patient portal</li><li><i class="fa-solid fa-check"></i>HIPAA compliant</li></ul></div>
         <div class="emr-card"><div class="emr-name">Practice Fusion</div><div class="emr-price">$199/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>ONC-certified EHR</li><li><i class="fa-solid fa-check"></i>Telehealth add-on</li><li><i class="fa-solid fa-check"></i>E-prescribing</li><li><i class="fa-solid fa-check"></i>Best for CPA prescribing</li></ul></div>
         <div class="emr-card"><div class="emr-name">DrChrono</div><div class="emr-price">~$199–499/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>iOS-first, great on iPhone</li><li><i class="fa-solid fa-check"></i>Telehealth built in</li><li><i class="fa-solid fa-check"></i>Custom intake forms</li><li><i class="fa-solid fa-check"></i>E-prescribing</li></ul></div>
         <div class="emr-card"><div class="emr-name">Cal.com + Doxy.me</div><div class="emr-price">Free combo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Cal.com: free scheduling</li><li><i class="fa-solid fa-check"></i>Doxy.me: free HIPAA video</li><li><i class="fa-solid fa-check"></i>Google Forms for intake</li><li><i class="fa-solid fa-check"></i>Zero-cost startup option</li></ul></div>
         <div class="emr-card"><div class="emr-name">OptiMantra</div><div class="emr-price">~$99/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Best for wellness/functional</li><li><i class="fa-solid fa-check"></i>Telehealth + scheduling</li><li><i class="fa-solid fa-check"></i>Lab integration</li><li><i class="fa-solid fa-check"></i>Good supplement workflow</li></ul></div>
       </div>
-      <div class="highlight-box" style="margin-top:36px;"><p><i class="fa-solid fa-lightbulb"></i><span><strong>Recommendation:</strong> Start with <strong>Cal.com + Doxy.me + Google Forms (free)</strong> while early-stage. Once you hit 10+ monthly patients, upgrade to <strong>Jane App (~$54/mo)</strong> for the all-in-one experience — telehealth, scheduling, intake, invoicing, and portal.</span></p></div>
+      <div class="highlight-box" style="margin-top:36px;"><p><i class="fa-solid fa-lightbulb"></i><span><strong>Current plan:</strong> Use <strong>Charm EHR (free)</strong> for intake forms, records, and telehealth. Use <strong>Calendly (HIPAA plan ~$16/mo)</strong> for patient-facing booking. Use <strong>Cal.com (free)</strong> for web consulting only. Upgrade to <strong>Jane App (~$54/mo)</strong> once hitting 10+ monthly patients.</span></p></div>
+
+      <div style="margin-top:52px;">
+        <span class="eyebrow">Scheduling Stack</span>
+        <h2 class="section-title">Platform <em>Decision Map</em></h2>
+        <div class="cards-grid">
+          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-calendar-days"></i></div><h3>Calendly — Clinical Booking</h3><p>Travel health, supplements, health coaching. HIPAA plan required ($16/mo). Get BAA signed. Embed widget on booking page. Patient books → auto-sends Charm intake link.</p></div>
+          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-file-medical"></i></div><h3>Charm EHR — Records + Telehealth</h3><p>All clinical intake forms here. Do not use Google Forms for health info — not HIPAA. Patient completes Charm form before visit. Use Charm's built-in video for the actual appointment.</p></div>
+          <div class="card" style="border-top:3px solid var(--slate2);"><div class="card-icon ci-slate"><i class="fa-solid fa-laptop-code"></i></div><h3>Cal.com — Web Consulting Only</h3><p>Free intro calls and web project discussions. No PHI involved so no HIPAA needed. Keep separate from clinical scheduling to avoid confusion.</p></div>
+        </div>
+      </div>
 
       <div style="margin-top:52px;">
         <span class="eyebrow">CPA Resources</span>
         <h2 class="section-title">Setting Up Your <em>CPA</em></h2>
         <div class="cards-grid">
-          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-file-contract"></i></div><h3>CA Pharmacist CPA</h3><p>Under California B&amp;P Code, pharmacists with CPAs can initiate/adjust drug therapy, order labs, and furnish travel medications under standardized procedures.</p></div>
-          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-handshake"></i></div><h3>Finding a Collaborating Physician</h3><p>Connect through Doximity, medical groups, or former clinical rotation contacts. The CPA defines your scope — negotiate what services you'll provide.</p></div>
-          <div class="card"><div class="card-icon ci-slate"><i class="fa-solid fa-scale-balanced"></i></div><h3>Legal &amp; Compliance</h3><p>Your CPA must comply with CA BOP regulations and cannot violate Stark Law or Anti-Kickback Statute. Consult a healthcare attorney before launching.</p></div>
+          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-file-contract"></i></div><h3>CA Pharmacist CPA</h3><p>Under California B&amp;P Code §4052.1, pharmacists with CPAs can initiate/adjust drug therapy, order labs, and furnish travel medications under standardized procedures.</p></div>
+          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-handshake"></i></div><h3>Finding a Collaborating Physician</h3><p>Connect through Doximity, medical groups, or former clinical rotation contacts. The CPA defines your scope — negotiate what services you'll provide. Travel medicine MDs are ideal.</p></div>
+          <div class="card"><div class="card-icon ci-slate"><i class="fa-solid fa-scale-balanced"></i></div><h3>Legal &amp; Compliance</h3><p>CPA must comply with CA BOP regulations. Cannot violate Stark Law or Anti-Kickback Statute. Consult a healthcare attorney before launching Rx services. Update site once CPA is signed.</p></div>
         </div>
+        <div class="highlight-box" style="margin-top:24px;"><p><i class="fa-solid fa-triangle-exclamation" style="color:var(--orange2);"></i><span><strong>Site update checklist once CPA is secured:</strong> (1) Update travel-health.html disclaimer to confirm CPA is in place. (2) Add "Prescription coordination" back to Comprehensive plan features. (3) Add malaria prophylaxis as a listed service. (4) Update the "coming soon" callout to "now available." (5) Update resources.html notes.</span></p></div>
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
-      <div class="footer-col"><h4>Clinical</h4><ul>
-        <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li>
-        <li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li>
-        <li><a href="health-coaching.html"><i class="fa-solid fa-dumbbell"></i>Health Coaching</a></li>
-        <li><a href="resources.html"><i class="fa-solid fa-book-medical"></i>EMR &amp; CPA Resources</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Digital</h4><ul>
-        <li><a href="web-consulting.html"><i class="fa-solid fa-laptop-code"></i>Web Consulting</a></li>
-        <li><a href="retainer.html"><i class="fa-solid fa-gear"></i>Retainer Plans</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Book &amp; Pay</h4><ul>
-        <li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book Appointment</a></li>
-        <li><a href="pay.html"><i class="fa-solid fa-credit-card"></i>Pay Now</a></li>
-        <li><a href="pay.html"><i class="fa-solid fa-at"></i>@drsunnybrph</a></li>
-      </ul></div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services provided within CA Board of Pharmacy scope of practice. Prescription travel medications pending CPA. Not a substitute for emergency care.</div>
-      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
-    </div>
-  </div>
-</footer>
-<script src="script.js"></script>
+</div><!-- end #content -->
+
+<script>
+// ─── CHANGE THIS PASSWORD ───
+const PASS = 'sunny2025';
+// ────────────────────────────
+
+const SESSION_KEY = 'dsb_resources_auth';
+
+// Check if already authenticated this session
+if (sessionStorage.getItem(SESSION_KEY) === 'true') {
+  unlock();
+}
+
+function checkPassword() {
+  const input = document.getElementById('pwInput');
+  const error = document.getElementById('gateError');
+  if (input.value === PASS) {
+    sessionStorage.setItem(SESSION_KEY, 'true');
+    unlock();
+  } else {
+    input.classList.add('error');
+    error.classList.add('show');
+    input.value = '';
+    setTimeout(() => {
+      input.classList.remove('error');
+      error.classList.remove('show');
+    }, 2000);
+  }
+}
+
+function unlock() {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+}
+
+function lockOut() {
+  sessionStorage.removeItem(SESSION_KEY);
+  document.getElementById('gate').style.display = 'flex';
+  document.getElementById('content').style.display = 'none';
+  document.getElementById('pwInput').value = '';
+}
+
+function togglePw() {
+  const input = document.getElementById('pwInput');
+  const icon = document.getElementById('pwEyeIcon');
+  if (input.type === 'password') {
+    input.type = 'text';
+    icon.className = 'fa-solid fa-eye-slash';
+  } else {
+    input.type = 'password';
+    icon.className = 'fa-solid fa-eye';
+  }
+}
+
+// Enter key submits
+document.getElementById('pwInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') checkPassword();
+});
+</script>
 </body>
 </html>
