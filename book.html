@@ -4,16 +4,34 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Book a Consultation | Dr. Sunny B PharmD | Virtual Appointments</title>
-<meta name="description" content="Schedule a virtual consultation with Dr. Sunny B PharmD. Travel health, supplement consults, health coaching, or web consulting. One link, all services."/>
-<meta name="keywords" content="book pharmacist consultation, virtual pharmacist appointment, travel health booking, supplement consult booking, Dr Sunny B appointment"/>
+<meta name="description" content="Schedule a virtual consultation with Dr. Sunny B PharmD. Travel health, supplement consults, health coaching, or web consulting. Book directly online."/>
 <meta property="og:title" content="Book a Consultation | Dr. Sunny B PharmD"/>
-<meta property="og:description" content="Schedule your virtual consultation with Dr. Sunny B. One link, all services."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://drsunnybrph.com/book.html"/>
 <link rel="canonical" href="https://drsunnybrph.com/book.html"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<style>
+  .cal-wrap {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow2);
+    overflow: hidden;
+    border: 1.5px solid var(--gray4);
+    min-height: 660px;
+  }
+  #my-cal-inline {
+    width: 100%;
+    min-height: 660px;
+    overflow: scroll;
+  }
+  .booking-intro {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .booking-intro .eyebrow { text-align: center; }
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -45,100 +63,36 @@
     <div class="page-hero-inner">
       <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Scheduling</span>
       <h1>Book Your <em>Appointment</em></h1>
-      <p>All consultations are virtual via Zoom. Pick your service and a time — confirmation and Charm EHR intake form link sent automatically.</p>
+      <p>All consultations are virtual via Zoom. Pick your service and a time — confirmation sent immediately with your Zoom link and intake form.</p>
     </div>
   </div>
 
   <section>
     <div class="container">
-
-      <!-- Big single CTA -->
-      <div class="schedule-box" style="margin-bottom:56px;">
-        <h2>One Link. <em>All Services.</em></h2>
-        <p>Pick your service type, choose a time, and you're done. Clinical services and web consulting all in one place.</p>
-        <div class="schedule-btns">
-          <a href="https://cal.com/drsunnyb" target="_blank" class="btn-orange" style="font-size:1rem;padding:16px 40px;"><i class="fa-solid fa-calendar-check"></i> Open Booking Calendar</a>
-        </div>
+      <div class="booking-intro">
+        <span class="eyebrow">All Services</span>
+        <h2 class="section-title">Choose a Service & <em>Pick a Time</em></h2>
+        <p class="section-sub" style="margin: 0 auto 32px;">Select any service below to see available times and book directly.</p>
       </div>
 
-      <!-- How it flows -->
-      <div style="margin-bottom:56px;">
-        <span class="eyebrow">How It Works</span>
-        <h2 class="section-title">Book in <em>3 Steps</em></h2>
-        <div class="steps-grid" style="margin-top:28px;">
-          <div class="step-card">
-            <div class="step-num">1</div>
-            <h4>Pick Your Service</h4>
-            <p>Select your consultation type from the calendar — travel health, supplements, health coaching, or web consulting.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">2</div>
-            <h4>Choose a Time</h4>
-            <p>Pick a time that works for you. Confirmation and Zoom link sent to your email immediately.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-num">3</div>
-            <h4>Complete Intake</h4>
-            <p>Clinical appointments: complete your HIPAA-secure Charm EHR intake form before the call. Web calls: just show up.</p>
-          </div>
-        </div>
+      <!-- Cal.com inline embed — all event types -->
+      <div class="cal-wrap">
+        <div id="my-cal-inline"></div>
       </div>
 
-      <!-- Service menu -->
-      <span class="eyebrow">Service Menu</span>
-      <h2 class="section-title">Choose Your <em>Consultation</em></h2>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <div class="price-icon"><i class="fa-solid fa-plane-departure"></i></div>
-          <h3>Travel Health Standard</h3>
-          <div class="price-amount">$75<span>/30 min</span></div>
-          <p class="price-desc">Single destination pre-travel consult. OTC guidance + vaccine counseling.</p>
-          <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
-        </div>
-        <div class="price-card featured">
-          <div class="featured-badge">Most Booked</div>
-          <div class="price-icon"><i class="fa-solid fa-earth-americas"></i></div>
-          <h3>Travel Comprehensive</h3>
-          <div class="price-amount">$125<span>/60 min</span></div>
-          <p class="price-desc">Multi-destination + full OTC protocol + follow-up message.</p>
-          <a class="btn-cta" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
-        </div>
-        <div class="price-card">
-          <div class="price-icon"><i class="fa-solid fa-leaf"></i></div>
-          <h3>Supplement Audit</h3>
-          <div class="price-amount">$95<span>/45 min</span></div>
-          <p class="price-desc">Full supplement stack review, interactions, and written action plan.</p>
-          <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
-        </div>
-        <div class="price-card">
-          <div class="price-icon"><i class="fa-solid fa-dumbbell"></i></div>
-          <h3>Fitness & Supplement Protocol</h3>
-          <div class="price-amount">$95<span>/50 min</span></div>
-          <p class="price-desc">Health coaching + full OTC fitness supplement protocol.</p>
-          <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
-        </div>
-        <div class="price-card">
-          <div class="price-icon"><i class="fa-solid fa-laptop-code"></i></div>
-          <h3>Web Consult Call</h3>
-          <div class="price-amount">Free<span>/30 min</span></div>
-          <p class="price-desc">Intro call to scope your website project. No intake form needed.</p>
-          <a class="btn-slate" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Free Call</a>
-        </div>
-      </div>
-
-      <div class="highlight-box" style="margin-top:36px;">
-        <p><i class="fa-solid fa-shield-halved"></i><span><strong>Clinical appointments:</strong> After booking, you'll receive a link to complete your intake form in <strong>Charm EHR</strong> — HIPAA-secure, reviewed by Dr. Sunny B before your session. No medical information is collected during the booking itself.</span></p>
-      </div>
-
+      <!-- Fallback note -->
+      <p style="text-align:center;font-size:.78rem;color:var(--gray2);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <i class="fa-solid fa-shield-halved" style="color:var(--emerald3);"></i>
+        Clinical appointments include a HIPAA-secure intake form via Charm EHR sent after booking.
+        Having trouble? <a href="https://cal.com/drsunnyb" target="_blank" style="color:var(--emerald2);font-weight:600;">Open in new tab</a>
+      </p>
     </div>
   </section>
 </main>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Clinical expertise without the waiting room."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div>
-      <div style="margin-top:8px;"><a href="mailto:sunny@drsunnybrph.com" style="color:rgba(255,255,255,.45);font-size:.77rem;text-decoration:none;font-family:'Inter',sans-serif;transition:color .2s;" onmouseover="this.style.color='var(--emerald4)'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><i class="fa-solid fa-envelope" style="font-size:.7rem;color:var(--emerald4);margin-right:5px;"></i>sunny@drsunnybrph.com</a></div>
-      </div>
+      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
       <div class="footer-col"><h4>Clinical</h4><ul>
         <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li>
         <li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li>
@@ -156,11 +110,23 @@
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Services provided by a CA licensed pharmacist within CA Board of Pharmacy scope of practice. Content is educational and does not constitute medical advice, diagnosis, or a patient-provider relationship unless explicitly established. Prescription travel medications pending CPA. Not a substitute for emergency care.</div>
-      <div class="footer-love"><i class="fa-solid fa-pills"></i> Clinical expertise without the waiting room.</div>
+      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services provided within CA Board of Pharmacy scope of practice. Prescription travel medications pending CPA. Not a substitute for emergency care.</div>
+      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
     </div>
   </div>
 </footer>
+
+<!-- Cal.com inline embed -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "drsunnyb", {origin:"https://app.cal.com"});
+  Cal.ns["drsunnyb"]("inline", {
+    elementOrSelector:"#my-cal-inline",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "drsunnyb",
+  });
+  Cal.ns["drsunnyb"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 <script src="script.js"></script>
 </body>
 </html>

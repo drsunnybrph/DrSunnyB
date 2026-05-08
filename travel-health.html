@@ -86,7 +86,7 @@
               <li><i class="fa-solid fa-check"></i>OTC medication guidance</li>
               <li><i class="fa-solid fa-check"></i>Written summary</li>
             </ul>
-            <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Consult</a>
+            <button class="btn-green" data-cal-namespace="travel-health-standard" data-cal-link="drsunnyb/travel-health-standard" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Consult</button>
           </div>
           <div class="price-card featured">
             <div class="featured-badge">Most Popular</div>
@@ -102,7 +102,7 @@
               <li><i class="fa-solid fa-check"></i>Follow-up message included</li>
               <li><i class="fa-solid fa-check" style="color:var(--orange2);"></i><em style="color:var(--orange2);font-size:.78rem;">Rx travel meds — coming once CPA secured</em></li>
             </ul>
-            <a class="btn-cta" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Consult</a>
+            <button class="btn-cta" data-cal-namespace="travel-health-comprehensive" data-cal-link="drsunnyb/travel-health-comprehensive" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Consult</button>
           </div>
           <div class="price-card">
             <div class="price-icon"><i class="fa-solid fa-people-group"></i></div>
@@ -168,6 +168,14 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "travel-health-standard", {origin:"https://app.cal.com"});
+  Cal.ns["travel-health-standard"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "travel-health-comprehensive", {origin:"https://app.cal.com"});
+  Cal.ns["travel-health-comprehensive"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 <script src="script.js"></script>
 </body>
 </html>
