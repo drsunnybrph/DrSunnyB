@@ -65,7 +65,7 @@
             <li><i class="fa-solid fa-check"></i>Hosting covered</li>
             <li><i class="fa-solid fa-check"></i>No contract</li>
           </ul>
-          <a class="btn-green" href="book.html"><i class="fa-solid fa-arrow-right"></i> Get Started</a>
+          <button class="btn-green" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
         </div>
         <div class="price-card featured">
           <div class="featured-badge">Standard Rate</div>
@@ -78,7 +78,7 @@
             <li><i class="fa-solid fa-check"></i>Priority response</li>
             <li><i class="fa-solid fa-check"></i>No contract, cancel anytime</li>
           </ul>
-          <a class="btn-cta" href="book.html"><i class="fa-solid fa-arrow-right"></i> Get Started</a>
+          <button class="btn-cta" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
         </div>
       </div>
 
@@ -96,7 +96,7 @@
               <li><i class="fa-solid fa-check"></i>Compliance guidance</li>
               <li><i class="fa-solid fa-check"></i>Written recommendations</li>
             </ul>
-            <a class="btn-green" href="book.html"><i class="fa-solid fa-arrow-right"></i> Get Started</a>
+            <button class="btn-green" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
           </div>
           <div class="price-card featured">
             <div class="featured-badge">Most Popular</div>
@@ -109,7 +109,7 @@
               <li><i class="fa-solid fa-check"></i>Patient education materials</li>
               <li><i class="fa-solid fa-check"></i>MTM support</li>
             </ul>
-            <a class="btn-cta" href="book.html"><i class="fa-solid fa-arrow-right"></i> Get Started</a>
+            <button class="btn-cta" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
           </div>
         </div>
       </div>
@@ -145,6 +145,12 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "web-consult", {origin:"https://app.cal.com"});
+  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 <script src="script.js"></script>
 </body>
 </html>

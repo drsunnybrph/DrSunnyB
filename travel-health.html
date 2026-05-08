@@ -114,7 +114,7 @@
               <li><i class="fa-solid fa-check"></i>Pediatric considerations</li>
               <li><i class="fa-solid fa-check"></i>Shared written summary</li>
             </ul>
-            <a class="btn-slate" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Consult</a>
+            <button class="btn-slate" data-cal-namespace="family-travel-health" data-cal-link="drsunnyb/family-travel-health" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Consult</button>
           </div>
         </div>
       </div>
@@ -175,6 +175,8 @@
   Cal.ns["travel-health-standard"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   Cal("init", "travel-health-comprehensive", {origin:"https://app.cal.com"});
   Cal.ns["travel-health-comprehensive"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "family-travel-health", {origin:"https://app.cal.com"});
+  Cal.ns["family-travel-health"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 <script src="script.js"></script>
 </body>

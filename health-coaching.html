@@ -88,7 +88,7 @@
               <li><i class="fa-solid fa-check"></i>Interaction screening</li>
               <li><i class="fa-solid fa-check"></i>Written summary</li>
             </ul>
-            <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Session</a>
+            <button class="btn-green" data-cal-namespace="wellness-check-in" data-cal-link="drsunnyb/wellness-check-in" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Session</button>
           </div>
           <div class="price-card featured">
             <div class="featured-badge">Best Value</div>
@@ -115,7 +115,7 @@
               <li><i class="fa-solid fa-check"></i>Async message support</li>
               <li><i class="fa-solid fa-check"></i>No contract, cancel anytime</li>
             </ul>
-            <a class="btn-slate" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Get Started</a>
+            <button class="btn-slate" data-cal-namespace="monthly-coaching-check-in" data-cal-link="drsunnyb/monthly-coaching-check-in" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Get Started</button>
           </div>
         </div>
       </div>
@@ -173,6 +173,10 @@
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "fitness-supplement-protocol", {origin:"https://app.cal.com"});
   Cal.ns["fitness-supplement-protocol"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "wellness-check-in", {origin:"https://app.cal.com"});
+  Cal.ns["wellness-check-in"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "monthly-coaching-check-in", {origin:"https://app.cal.com"});
+  Cal.ns["monthly-coaching-check-in"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 <script src="script.js"></script>
 </body>

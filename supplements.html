@@ -69,7 +69,7 @@
               <li><i class="fa-solid fa-check"></i>Quality brand guidance</li>
               <li><i class="fa-solid fa-check"></i>Written summary</li>
             </ul>
-            <a class="btn-green" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Session</a>
+            <button class="btn-green" data-cal-namespace="supplement-quick-review" data-cal-link="drsunnyb/supplement-quick-review" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Session</button>
           </div>
           <div class="price-card featured">
             <div class="featured-badge">Best Value</div>
@@ -95,7 +95,7 @@
               <li><i class="fa-solid fa-check"></i>Safety &amp; efficacy analysis</li>
               <li><i class="fa-solid fa-check"></i>Personalized protocol</li>
             </ul>
-            <a class="btn-slate" href="https://cal.com/drsunnyb" target="_blank"><i class="fa-solid fa-calendar-check"></i> Book Session</a>
+            <button class="btn-slate" data-cal-namespace="sport-performance-stack" data-cal-link="drsunnyb/sport-performance-stack" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Session</button>
           </div>
         </div>
       </div>
@@ -148,6 +148,10 @@
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "full-supplement-audit", {origin:"https://app.cal.com"});
   Cal.ns["full-supplement-audit"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "supplement-quick-review", {origin:"https://app.cal.com"});
+  Cal.ns["supplement-quick-review"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "sport-performance-stack", {origin:"https://app.cal.com"});
+  Cal.ns["sport-performance-stack"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 <script src="script.js"></script>
 </body>
