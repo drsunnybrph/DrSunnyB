@@ -245,3 +245,56 @@ footer{background:var(--forest);padding:52px 40px 24px;border-top:1px solid rgba
   .schedule-btns a,.schedule-btns .btn-ghost-white{width:100%;max-width:320px;justify-content:center;}
   .pricing-grid{grid-template-columns:1fr;}
 }
+
+/* ─── COMING SOON / WAITLIST ─── */
+.coming-soon-badge{display:inline-flex;align-items:center;gap:6px;background:var(--orange4);color:var(--orange);font-size:.65rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:50px;border:1px solid var(--orange3);margin-bottom:10px;}
+.coming-soon-badge i{font-size:.65rem;}
+.card.coming-soon{opacity:.85;position:relative;}
+.card.coming-soon::after{content:'';position:absolute;inset:0;border-radius:20px;border:2px dashed var(--orange3);pointer-events:none;}
+.btn-waitlist{background:transparent;color:var(--orange);border:1.5px solid var(--orange3);border-radius:50px;padding:10px 22px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:7px;transition:all .2s;width:100%;justify-content:center;}
+.btn-waitlist:hover{background:var(--orange4);border-color:var(--orange2);}
+
+/* ─── WAITLIST MODAL ─── */
+.wl-overlay{position:fixed;inset:0;z-index:3000;background:rgba(6,78,59,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;}
+.wl-overlay.open{display:flex;}
+.wl-box{background:white;border-radius:24px;padding:44px 36px;max-width:460px;width:100%;box-shadow:0 24px 64px rgba(0,0,0,.25);position:relative;}
+.wl-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--gray2);transition:color .2s;}
+.wl-close:hover{color:var(--text);}
+.wl-icon{width:56px;height:56px;background:var(--orange4);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.wl-icon i{font-size:1.5rem;color:var(--orange);}
+.wl-box h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text);text-align:center;margin-bottom:6px;}
+.wl-box p{font-size:.85rem;color:var(--gray);text-align:center;line-height:1.6;margin-bottom:24px;}
+.wl-service-tag{display:block;text-align:center;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--orange);margin-bottom:20px;}
+.wl-input{width:100%;border:1.5px solid var(--gray4);border-radius:10px;padding:11px 14px;font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);outline:none;transition:border .2s;background:var(--cream);margin-bottom:10px;}
+.wl-input:focus{border-color:var(--emerald3);background:white;}
+.btn-wl-submit{width:100%;background:linear-gradient(135deg,var(--orange),var(--orange2));color:white;border:none;border-radius:50px;padding:13px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;}
+.btn-wl-submit:hover{transform:translateY(-1px);opacity:.92;}
+.wl-note{font-size:.72rem;color:var(--gray2);text-align:center;margin-top:12px;line-height:1.5;}
+
+/* ─── LANGUAGE BADGE ─── */
+.lang-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);font-size:.72rem;font-weight:600;padding:6px 16px;border-radius:50px;margin-bottom:20px;}
+.lang-badge i{color:var(--emerald4);font-size:.78rem;}
+.lang-badge-light{display:inline-flex;align-items:center;gap:8px;background:var(--mint);border:1px solid var(--mint2);color:var(--emerald);font-size:.72rem;font-weight:600;padding:6px 16px;border-radius:50px;margin-top:12px;}
+.lang-badge-light i{color:var(--emerald2);font-size:.78rem;}
+
+/* ─── COUNTY SERVICE AREA ─── */
+.county-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);font-size:.68rem;font-weight:600;padding:5px 13px;border-radius:50px;margin-right:6px;margin-top:8px;}
+.county-tag i{font-size:.65rem;color:var(--emerald4);}
+.county-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;}
+
+/* ─── NO-SHOTS NOTICE ─── */
+.no-shots-notice{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--emerald4);border-radius:10px;padding:10px 16px;margin-top:12px;font-size:.74rem;color:rgba(255,255,255,.65);line-height:1.6;display:flex;gap:10px;position:relative;z-index:1;}
+.no-shots-notice i{color:var(--emerald4);flex-shrink:0;margin-top:2px;}
+
+/* ─── FOOTER LEGAL EXTENDED ─── */
+.footer-legal-extended{font-size:.67rem;color:rgba(255,255,255,.2);line-height:1.7;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06);}
+
+/* ─── PRESCRIPTION FUTURE BOX ─── */
+.rx-future-box{background:linear-gradient(135deg,var(--forest),var(--emerald));border-radius:20px;padding:32px 28px;color:white;position:relative;overflow:hidden;margin-top:40px;}
+.rx-future-box::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px;}
+.rx-future-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:white;margin-bottom:8px;position:relative;}
+.rx-future-box h3 em{color:var(--emerald4);font-style:italic;}
+.rx-future-box p{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.7;position:relative;}
+.rx-future-list{list-style:none;margin-top:14px;position:relative;}
+.rx-future-list li{font-size:.82rem;color:rgba(255,255,255,.7);padding:5px 0;display:flex;align-items:center;gap:10px;}
+.rx-future-list li i{color:var(--emerald4);font-size:.75rem;flex-shrink:0;}

@@ -85,3 +85,44 @@ function fallbackCopy(text, callback) {
   document.body.removeChild(el);
   if (callback) callback();
 }
+
+// ─── WAITLIST MODAL ───
+function openWaitlist(service) {
+  const el = document.getElementById('waitlistService');
+  if (el) el.textContent = service;
+  const modal = document.getElementById('waitlistModal');
+  if (modal) modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeWaitlist() {
+  const modal = document.getElementById('waitlistModal');
+  if (modal) modal.classList.remove('open');
+  document.body.style.overflow = '';
+  const nameEl = document.getElementById('waitlistName');
+  const emailEl = document.getElementById('waitlistEmail');
+  if (nameEl) nameEl.value = '';
+  if (emailEl) emailEl.value = '';
+}
+
+function submitWaitlist() {
+  const name = document.getElementById('waitlistName')?.value?.trim() || '';
+  const email = document.getElementById('waitlistEmail')?.value?.trim() || '';
+  const service = document.getElementById('waitlistService')?.textContent || 'Service';
+
+  if (!email) {
+    document.getElementById('waitlistEmail').style.borderColor = '#EF4444';
+    document.getElementById('waitlistEmail').placeholder = 'Email is required';
+    return;
+  }
+
+  const subject = encodeURIComponent(`Waitlist Request: ${service}`);
+  const body = encodeURIComponent(`Hi Dr. Sunny B,\n\nPlease add me to the waitlist for: ${service}\n\nName: ${name || 'Not provided'}\nEmail: ${email}\n\nThank you!`);
+  window.location.href = `mailto:drsunnybrph@gmail.com?subject=${subject}&body=${body}`;
+  closeWaitlist();
+}
+
+// Close waitlist modal on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeDropdowns(); closeMobileMenu(); closeWaitlist(); }
+});
