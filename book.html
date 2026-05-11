@@ -64,7 +64,7 @@
           <h3>Clinical Services — Waitlist</h3>
           <p>Travel Health, Supplement Audits, and Performance Optimization are in development pending CPA finalization. Join the waitlist for priority access and early-bird pricing.</p>
           <div class="tag-row" style="margin-bottom:16px;"><span class="badge b-orange">Pending CPA</span></div>
-          <button class="btn-waitlist" onclick="openWaitlist('Clinical Services — General Waitlist')"><i class="fa-solid fa-bell"></i> Join Clinical Waitlist</button>
+          <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join Clinical Waitlist</a>
         </div>
       </div>
 
@@ -86,15 +86,29 @@
         <h2>Clinical Services — <em>Join the Waitlist</em></h2>
         <p>Travel Health, Supplement Audits, and Performance Optimization launch once our CPA is finalized. Early waitlist members receive priority booking and early-bird pricing.</p>
         <div class="schedule-btns">
-          <button class="btn-orange" onclick="openWaitlist('Travel Health Consultations')"><i class="fa-solid fa-plane-departure"></i> Travel Health Waitlist</button>
-          <button class="btn-ghost-white" onclick="openWaitlist('Clinical Supplement & Interaction Audits')"><i class="fa-solid fa-leaf"></i> Supplement Audit Waitlist</button>
-          <button class="btn-ghost-white" onclick="openWaitlist('Performance & Metabolic Optimization')"><i class="fa-solid fa-dumbbell"></i> Performance Coaching Waitlist</button>
+          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-plane-departure"></i> Travel Health Waitlist</button>
+          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-leaf"></i> Supplement Audit Waitlist</button>
+          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-dumbbell"></i> Performance Coaching Waitlist</button>
         </div>
       </div>
     </div>
   </section>
 </main>
-<div class="wl-overlay" id="waitlistModal" onclick="if(event.target===this)closeWaitlist()"><div class="wl-box"><button class="wl-close" onclick="closeWaitlist()">✕</button><div class="wl-icon"><i class="fa-solid fa-bell"></i></div><h3>Join the Waitlist</h3><span class="wl-service-tag" id="waitlistService">Service</span><p>Be first notified when clinical bookings open.</p><input class="wl-input" id="waitlistName" type="text" placeholder="Your name"/><input class="wl-input" id="waitlistEmail" type="email" placeholder="Your email address"/><button class="btn-wl-submit" onclick="submitWaitlist()"><i class="fa-solid fa-paper-plane"></i> Join Waitlist</button><p class="wl-note"><i class="fa-solid fa-lock" style="color:var(--emerald3);"></i> No spam. Notified only when bookings open.</p></div></div>
+
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "drsunnyb", {origin:"https://app.cal.com"});
+  Cal.ns["drsunnyb"]("inline", {
+    elementOrSelector:"#my-cal-inline",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "drsunnyb",
+  });
+  Cal.ns["drsunnyb"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "web-consult", {origin:"https://app.cal.com"});
+  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -128,18 +142,7 @@
     </div>
   </div>
 </footer>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "drsunnyb", {origin:"https://app.cal.com"});
-  Cal.ns["drsunnyb"]("inline", {
-    elementOrSelector:"#my-cal-inline",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "drsunnyb",
-  });
-  Cal.ns["drsunnyb"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  Cal("init", "web-consult", {origin:"https://app.cal.com"});
-  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
+
 <script src="script.js"></script>
 </body>
 </html>

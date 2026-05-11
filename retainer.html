@@ -92,7 +92,7 @@
               <li><i class="fa-solid fa-check"></i>Compliance guidance</li>
               <li><i class="fa-solid fa-check"></i>Written recommendations</li>
             </ul>
-            <button class="btn-waitlist" onclick="openWaitlist('Clinical Advisory Retainer — $150/mo')"><i class="fa-solid fa-bell"></i> Join Waitlist</button>
+            <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join Waitlist</a>
           </div>
           <div class="price-card coming-soon featured">
             <div class="featured-badge">Most Popular</div>
@@ -106,14 +106,21 @@
               <li><i class="fa-solid fa-check"></i>Patient education materials</li>
               <li><i class="fa-solid fa-check"></i>MTM support</li>
             </ul>
-            <button class="btn-waitlist" onclick="openWaitlist('Healthcare Partner Retainer — $250/mo')"><i class="fa-solid fa-bell"></i> Join Waitlist</button>
+            <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join Waitlist</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-<div class="wl-overlay" id="waitlistModal" onclick="if(event.target===this)closeWaitlist()"><div class="wl-box"><button class="wl-close" onclick="closeWaitlist()">✕</button><div class="wl-icon"><i class="fa-solid fa-bell"></i></div><h3>Join the Waitlist</h3><span class="wl-service-tag" id="waitlistService">Service</span><p>Be first notified when this service launches.</p><input class="wl-input" id="waitlistName" type="text" placeholder="Your name"/><input class="wl-input" id="waitlistEmail" type="email" placeholder="Your email address"/><button class="btn-wl-submit" onclick="submitWaitlist()"><i class="fa-solid fa-paper-plane"></i> Join Waitlist</button><p class="wl-note"><i class="fa-solid fa-lock" style="color:var(--emerald3);"></i> No spam. Notified only when bookings open.</p></div></div>
+
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "web-consult", {origin:"https://app.cal.com"});
+  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -147,11 +154,7 @@
     </div>
   </div>
 </footer>
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "web-consult", {origin:"https://app.cal.com"});
-  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
+
 <script src="script.js"></script>
 </body>
 </html>

@@ -251,7 +251,7 @@ footer{background:var(--forest);padding:52px 40px 24px;border-top:1px solid rgba
 .coming-soon-badge i{font-size:.65rem;}
 .card.coming-soon{opacity:.85;position:relative;}
 .card.coming-soon::after{content:'';position:absolute;inset:0;border-radius:20px;border:2px dashed var(--orange3);pointer-events:none;}
-.btn-waitlist{background:transparent;color:var(--orange);border:1.5px solid var(--orange3);border-radius:50px;padding:10px 22px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:7px;transition:all .2s;width:100%;justify-content:center;}
+.btn-waitlist{text-decoration:none;background:transparent;color:var(--orange);border:1.5px solid var(--orange3);border-radius:50px;padding:10px 22px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:7px;transition:all .2s;width:100%;justify-content:center;}
 .btn-waitlist:hover{background:var(--orange4);border-color:var(--orange2);}
 
 /* ─── WAITLIST MODAL ─── */

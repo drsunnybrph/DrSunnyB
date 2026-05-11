@@ -81,7 +81,7 @@
           <div class="card-icon ci-green"><i class="fa-solid fa-plane-departure"></i></div>
           <h3>Travel Health Consults</h3>
           <p>Virtual pre-travel appointments covering destination risk, vaccine counseling, OTC guidance, and — once CPA is finalized — prescription travel medication furnishing.</p>
-          <button class="btn-waitlist" onclick="openWaitlist('Travel Health Consultations')"><i class="fa-solid fa-bell"></i> Join the Waitlist</button>
+          <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join the Waitlist</a>
         </div>
         <!-- COMING SOON: Supplements -->
         <div class="card coming-soon" style="text-decoration:none;">
@@ -89,7 +89,7 @@
           <div class="card-icon ci-green"><i class="fa-solid fa-leaf"></i></div>
           <h3>Supplement Consultations</h3>
           <p>Evidence-based OTC and nutraceutical counseling. Interactions, dosing, and personalized recommendations from a clinical pharmacist.</p>
-          <button class="btn-waitlist" onclick="openWaitlist('Supplement Consultations')"><i class="fa-solid fa-bell"></i> Join the Waitlist</button>
+          <a class="btn-waitlist" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join the Waitlist</a>
         </div>
         <!-- COMING SOON: Health Coaching -->
         <div class="card coming-soon" style="text-decoration:none;">
@@ -97,7 +97,7 @@
           <div class="card-icon ci-orange"><i class="fa-solid fa-dumbbell"></i></div>
           <h3>Health Coaching</h3>
           <p>Fitness goals, wellness optimization, and OTC supplement protocols — backed by a PharmD. Evidence-based, no guesswork.</p>
-          <button class="btn-waitlist" onclick="openWaitlist('Health Coaching')"><i class="fa-solid fa-bell"></i> Join the Waitlist</button>
+          <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join the Waitlist</a>
         </div>
         <!-- ACTIVE: Web Consulting -->
         <a class="card" href="web-consulting.html" style="text-decoration:none;">
@@ -125,20 +125,6 @@
   </section>
 </main>
 
-<!-- Waitlist Modal -->
-<div class="wl-overlay" id="waitlistModal" onclick="if(event.target===this)closeWaitlist()">
-  <div class="wl-box">
-    <button class="wl-close" onclick="closeWaitlist()">✕</button>
-    <div class="wl-icon"><i class="fa-solid fa-bell"></i></div>
-    <h3>Join the Waitlist</h3>
-    <span class="wl-service-tag" id="waitlistService">Travel Health Consultations</span>
-    <p>Be the first to know when this service launches. Clinical protocols are being finalized — we'll notify you the moment bookings open.</p>
-    <input class="wl-input" id="waitlistName" type="text" placeholder="Your name"/>
-    <input class="wl-input" id="waitlistEmail" type="email" placeholder="Your email address"/>
-    <button class="btn-wl-submit" onclick="submitWaitlist()"><i class="fa-solid fa-paper-plane"></i> Join Waitlist</button>
-    <p class="wl-note"><i class="fa-solid fa-lock" style="color:var(--emerald3);"></i> Your information is sent securely. No spam, ever.</p>
-  </div>
-</div>
 
 <footer>
   <div class="footer-inner">
@@ -173,6 +159,7 @@
     </div>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

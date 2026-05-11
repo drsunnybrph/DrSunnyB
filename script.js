@@ -86,43 +86,16 @@ function fallbackCopy(text, callback) {
   if (callback) callback();
 }
 
-// ─── WAITLIST MODAL ───
+// ─── WAITLIST ───
+// All "Join Waitlist" buttons now link directly to Google Form.
+// No modal needed. Form URL is hardcoded in each HTML file.// ─── WAITLIST ───
+// All waitlist buttons now link directly to the Google Form.
+// This function is kept as a fallback for any inline onclick calls.
+const WAITLIST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link";
+
 function openWaitlist(service) {
-  const el = document.getElementById('waitlistService');
-  if (el) el.textContent = service;
-  const modal = document.getElementById('waitlistModal');
-  if (modal) modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  window.open(WAITLIST_URL, '_blank', 'noopener,noreferrer');
 }
-
-function closeWaitlist() {
-  const modal = document.getElementById('waitlistModal');
-  if (modal) modal.classList.remove('open');
-  document.body.style.overflow = '';
-  const nameEl = document.getElementById('waitlistName');
-  const emailEl = document.getElementById('waitlistEmail');
-  if (nameEl) nameEl.value = '';
-  if (emailEl) emailEl.value = '';
-}
-
-function submitWaitlist() {
-  const name = document.getElementById('waitlistName')?.value?.trim() || '';
-  const email = document.getElementById('waitlistEmail')?.value?.trim() || '';
-  const service = document.getElementById('waitlistService')?.textContent || 'Service';
-
-  if (!email) {
-    document.getElementById('waitlistEmail').style.borderColor = '#EF4444';
-    document.getElementById('waitlistEmail').placeholder = 'Email is required';
-    return;
-  }
-
-  const subject = encodeURIComponent(`Waitlist Request: ${service}`);
-  const body = encodeURIComponent(`Hi Dr. Sunny B,\n\nPlease add me to the waitlist for: ${service}\n\nName: ${name || 'Not provided'}\nEmail: ${email}\n\nThank you!`);
-  window.location.href = `mailto:drsunnybrph@gmail.com?subject=${subject}&body=${body}`;
-  closeWaitlist();
-}
-
-// Close waitlist modal on Escape
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeDropdowns(); closeMobileMenu(); closeWaitlist(); }
-});
+// Legacy stubs — no longer used
+function closeWaitlist() {}
+function submitWaitlist() { openWaitlist(''); }
