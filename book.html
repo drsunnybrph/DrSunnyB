@@ -3,35 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Book a Consultation | Dr. Sunny B PharmD | Virtual Appointments</title>
-<meta name="description" content="Schedule a virtual consultation with Dr. Sunny B PharmD. Travel health, supplement consults, health coaching, or web consulting. Book directly online."/>
-<meta property="og:title" content="Book a Consultation | Dr. Sunny B PharmD"/>
+<title>Book an Appointment | Dr. Sunny B Pharmacist Consulting | Solano & Ventura County CA</title>
+<meta name="description" content="Book a web consulting call with Dr. Sunny B Pharmacist Consulting — active now. Clinical services (Travel Health, Supplements, Health Coaching) are in development — join the waitlist. Serving Solano County and Ventura County, California."/>
+<meta property="og:title" content="Book | Dr. Sunny B Pharmacist Consulting"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://drsunnybrph.com/book.html"/>
 <link rel="canonical" href="https://drsunnybrph.com/book.html"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
-<style>
-  .cal-wrap {
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: var(--shadow2);
-    overflow: hidden;
-    border: 1.5px solid var(--gray4);
-    min-height: 660px;
-  }
-  #my-cal-inline {
-    width: 100%;
-    min-height: 660px;
-    overflow: scroll;
-  }
-  .booking-intro {
-    text-align: center;
-    margin-bottom: 36px;
-  }
-  .booking-intro .eyebrow { text-align: center; }
-</style>
 </head>
 <body>
 <nav class="navbar">
@@ -57,42 +37,72 @@
   </ul>
   <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
 </nav>
-
 <main>
   <div class="page-hero">
     <div class="page-hero-inner">
       <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Scheduling</span>
       <h1>Book Your <em>Appointment</em></h1>
-      <p>All consultations are virtual via Zoom. Pick your service and a time — confirmation sent immediately with your Zoom link and intake form.</p>
+      <p>Web consulting is active and booking now. Clinical services are in development — join the waitlist to be first notified when they launch.</p>
     </div>
   </div>
 
   <section>
     <div class="container">
-      <div class="booking-intro">
-        <span class="eyebrow">All Services</span>
-        <h2 class="section-title">Choose a Service & <em>Pick a Time</em></h2>
-        <p class="section-sub" style="margin: 0 auto 32px;">Select any service below to see available times and book directly.</p>
+
+      <!-- Two-track system -->
+      <div class="cards-grid" style="margin-bottom:48px;">
+        <div class="card" style="border-top:3px solid var(--emerald3);">
+          <div class="card-icon ci-green"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Web Consulting — Active Now</h3>
+          <p>Digital strategy, website builds, and retainer plans for healthcare professionals and small businesses. Free 30-min strategy call to scope your project.</p>
+          <div class="tag-row" style="margin-bottom:16px;"><span class="badge b-green">Booking Now</span><span class="badge b-green">Free Intro Call</span></div>
+          <button class="btn-green" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Free Strategy Call</button>
+        </div>
+        <div class="card coming-soon" style="border-top:3px dashed var(--orange3);">
+          <div class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Coming Soon</div>
+          <div class="card-icon ci-orange"><i class="fa-solid fa-plane-departure"></i></div>
+          <h3>Clinical Services — Waitlist</h3>
+          <p>Travel Health, Supplement Audits, and Performance Optimization are in development pending CPA finalization. Join the waitlist for priority access and early-bird pricing.</p>
+          <div class="tag-row" style="margin-bottom:16px;"><span class="badge b-orange">Pending CPA</span></div>
+          <button class="btn-waitlist" onclick="openWaitlist('Clinical Services — General Waitlist')"><i class="fa-solid fa-bell"></i> Join Clinical Waitlist</button>
+        </div>
       </div>
 
-      <!-- Cal.com inline embed — all event types -->
-      <div class="cal-wrap">
-        <div id="my-cal-inline"></div>
+      <!-- Web Consulting Calendar -->
+      <div style="margin-bottom:56px;">
+        <span class="eyebrow">Web Consulting — Book Now</span>
+        <h2 class="section-title">Schedule a Free <em>Strategy Call</em></h2>
+        <div style="background:white;border-radius:20px;box-shadow:var(--shadow2);overflow:hidden;border:1.5px solid var(--gray4);min-height:660px;margin-top:28px;">
+          <div id="my-cal-inline"></div>
+        </div>
+        <p style="text-align:center;font-size:.78rem;color:var(--gray2);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
+          <i class="fa-solid fa-laptop-code" style="color:var(--emerald3);"></i> Web consulting calls only. Clinical bookings open once CPA is finalized.
+          <a href="https://cal.com/drsunnyb" target="_blank" style="color:var(--emerald2);font-weight:600;margin-left:4px;">Open in new tab</a>
+        </p>
       </div>
 
-      <!-- Fallback note -->
-      <p style="text-align:center;font-size:.78rem;color:var(--gray2);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
-        <i class="fa-solid fa-shield-halved" style="color:var(--emerald3);"></i>
-        Clinical appointments include a HIPAA-secure intake form via Charm EHR sent after booking.
-        Having trouble? <a href="https://cal.com/drsunnyb" target="_blank" style="color:var(--emerald2);font-weight:600;">Open in new tab</a>
-      </p>
+      <!-- Clinical Waitlist -->
+      <div class="schedule-box">
+        <h2>Clinical Services — <em>Join the Waitlist</em></h2>
+        <p>Travel Health, Supplement Audits, and Performance Optimization launch once our CPA is finalized. Early waitlist members receive priority booking and early-bird pricing.</p>
+        <div class="schedule-btns">
+          <button class="btn-orange" onclick="openWaitlist('Travel Health Consultations')"><i class="fa-solid fa-plane-departure"></i> Travel Health Waitlist</button>
+          <button class="btn-ghost-white" onclick="openWaitlist('Clinical Supplement & Interaction Audits')"><i class="fa-solid fa-leaf"></i> Supplement Audit Waitlist</button>
+          <button class="btn-ghost-white" onclick="openWaitlist('Performance & Metabolic Optimization')"><i class="fa-solid fa-dumbbell"></i> Performance Coaching Waitlist</button>
+        </div>
+      </div>
     </div>
   </section>
 </main>
+<div class="wl-overlay" id="waitlistModal" onclick="if(event.target===this)closeWaitlist()"><div class="wl-box"><button class="wl-close" onclick="closeWaitlist()">✕</button><div class="wl-icon"><i class="fa-solid fa-bell"></i></div><h3>Join the Waitlist</h3><span class="wl-service-tag" id="waitlistService">Service</span><p>Be first notified when clinical bookings open.</p><input class="wl-input" id="waitlistName" type="text" placeholder="Your name"/><input class="wl-input" id="waitlistEmail" type="email" placeholder="Your email address"/><button class="btn-wl-submit" onclick="submitWaitlist()"><i class="fa-solid fa-paper-plane"></i> Join Waitlist</button><p class="wl-note"><i class="fa-solid fa-lock" style="color:var(--emerald3);"></i> No spam. Notified only when bookings open.</p></div></div>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Healing patients. Building brands."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div></div>
+      <div>
+        <div class="footer-brand">Dr. Sunny B <span>Pharmacist Consulting</span></div>
+        <div class="footer-tagline">"Clinical expertise without the waiting room."<br/>Owned &amp; operated by Amrinder Bhandal, PharmD<br/>Specialist in Clinical Strategy &amp; Healthcare Operations<br/>Serving Solano County &amp; Ventura County, California</div>
+        <div style="margin-top:10px;"><a href="mailto:drsunnybrph@gmail.com" style="color:rgba(255,255,255,.45);font-size:.77rem;text-decoration:none;font-family:'Inter',sans-serif;"><i class="fa-solid fa-envelope" style="font-size:.7rem;color:var(--emerald4);margin-right:5px;"></i>drsunnybrph@gmail.com</a></div>
+      </div>
       <div class="footer-col"><h4>Clinical</h4><ul>
         <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li>
         <li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li>
@@ -110,13 +120,14 @@
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Clinical services provided within CA Board of Pharmacy scope of practice. Prescription travel medications pending CPA. Not a substitute for emergency care.</div>
-      <div class="footer-love"><i class="fa-solid fa-pills"></i> Healing patients. Building brands.</div>
+      <div>
+        <div class="footer-legal">© 2025 Dr. Sunny B Pharmacist Consulting · All rights reserved · Amrinder Bhandal, PharmD · CA BOP License Active<br/>Clinical services governed by California Business and Professions Code § 4052.9. Consultation and Medication Furnishing Only. No on-site vaccinations. Professional referrals provided for all required immunizations.<br/>Prescription services pending CPA finalization. Content is educational and does not constitute medical advice, diagnosis, or a patient-provider relationship. Not a substitute for emergency care.</div>
+        <div class="footer-legal-extended">This clinical practice is owned and operated by Amrinder Bhandal, PharmD. All service agreements and protocols are structured for seamless succession to a California Professional Corporation as permitted by the Moscone-Knox Professional Corporation Act.</div>
+      </div>
+      <div class="footer-love"><i class="fa-solid fa-pills"></i> Clinical expertise without the waiting room.</div>
     </div>
   </div>
 </footer>
-
-<!-- Cal.com inline embed -->
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "drsunnyb", {origin:"https://app.cal.com"});
@@ -126,6 +137,8 @@
     calLink: "drsunnyb",
   });
   Cal.ns["drsunnyb"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal("init", "web-consult", {origin:"https://app.cal.com"});
+  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
 </script>
 <script src="script.js"></script>
 </body>

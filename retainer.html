@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Monthly Retainer Plans | Dr. Sunny B | Web Maintenance & Clinical Advisory</title>
-<meta name="description" content="Monthly web maintenance or clinical advisory retainer plans. No contracts. Website upkeep from $20/mo, clinical pharmacist advisory from $150/mo."/>
-<meta name="keywords" content="website maintenance plan California, clinical pharmacist retainer, monthly web support, pharmacist advisory service, telehealth pharmacist partnership"/>
-<meta property="og:title" content="Monthly Retainer Plans | Dr. Sunny B"/>
-<meta property="og:description" content="Web maintenance or clinical advisory support — predictable monthly pricing, no contracts."/>
+<title>Monthly Retainer Plans | Dr. Sunny B Pharmacist Consulting | Solano & Ventura County CA</title>
+<meta name="description" content="Monthly web maintenance and clinical advisory retainer plans from Dr. Sunny B Pharmacist Consulting. No contracts. Website maintenance from $20/mo, clinical pharmacist advisory from $150/mo. Serving Solano County and Ventura County, California."/>
+<meta property="og:title" content="Monthly Retainer Plans | Dr. Sunny B Pharmacist Consulting"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://drsunnybrph.com/retainer.html"/>
 <link rel="canonical" href="https://drsunnybrph.com/retainer.html"/>
@@ -16,7 +14,6 @@
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
 <nav class="navbar">
   <a class="nav-brand" href="index.html">
     <div class="nav-brand-icon"><i class="fa-solid fa-pills"></i></div>
@@ -40,25 +37,23 @@
   </ul>
   <button class="hamburger" onclick="toggleMobileMenu()" id="hamburger" aria-label="Toggle menu">☰</button>
 </nav>
-
 <main>
   <div class="page-hero">
     <div class="page-hero-inner">
       <span class="eyebrow"><i class="fa-solid fa-clipboard-list"></i> Ongoing Partnership</span>
       <h1>Monthly <em>Retainer Plans</em></h1>
-      <p>Website maintenance or clinical advisory support — predictable monthly pricing, no surprises, no contracts.</p>
+      <p>Website maintenance or clinical advisory support — predictable monthly pricing, no surprises, no contracts. Web retainers active now. Clinical advisory opens once CPA is finalized.</p>
     </div>
   </div>
-
   <section>
     <div class="container">
-      <span class="eyebrow">Web Retainers</span>
+      <span class="eyebrow">Web Retainers — Active Now</span>
       <h2 class="section-title">Website <em>Maintenance</em></h2>
       <div class="pricing-grid">
         <div class="price-card">
           <div class="price-icon"><i class="fa-solid fa-wrench"></i></div>
           <h3>Basic Maintenance</h3><div class="price-amount">$20<span>/month</span></div>
-          <p class="price-desc">Keep your site live. Great for friends and family pricing.</p>
+          <p class="price-desc">Keep your site live. Friends and family pricing.</p>
           <ul class="price-features">
             <li><i class="fa-solid fa-check"></i>Site stays live 24/7</li>
             <li><i class="fa-solid fa-check"></i>Up to 2 edits/month</li>
@@ -83,45 +78,49 @@
       </div>
 
       <div style="margin-top:56px;">
-        <span class="eyebrow">Clinical Retainers</span>
+        <span class="eyebrow">Clinical Retainers — Coming Soon</span>
         <h2 class="section-title">Clinical <em>Advisory</em></h2>
         <div class="pricing-grid">
-          <div class="price-card">
+          <div class="price-card coming-soon">
+            <div class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Pending CPA</div>
             <div class="price-icon"><i class="fa-solid fa-pills"></i></div>
             <h3>Clinical Advisory</h3><div class="price-amount">$150<span>/month</span></div>
-            <p class="price-desc">For health-adjacent businesses needing pharmacist guidance.</p>
+            <p class="price-desc">For health-adjacent businesses needing pharmacist guidance on ingredients, labels, and compliance.</p>
             <ul class="price-features">
               <li><i class="fa-solid fa-check"></i>2 consult calls/month</li>
               <li><i class="fa-solid fa-check"></i>Ingredient/label review</li>
               <li><i class="fa-solid fa-check"></i>Compliance guidance</li>
               <li><i class="fa-solid fa-check"></i>Written recommendations</li>
             </ul>
-            <button class="btn-green" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
+            <button class="btn-waitlist" onclick="openWaitlist('Clinical Advisory Retainer — $150/mo')"><i class="fa-solid fa-bell"></i> Join Waitlist</button>
           </div>
-          <div class="price-card featured">
+          <div class="price-card coming-soon featured">
             <div class="featured-badge">Most Popular</div>
+            <div class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Pending CPA</div>
             <div class="price-icon"><i class="fa-solid fa-stethoscope"></i></div>
             <h3>Healthcare Partner</h3><div class="price-amount">$250<span>/month</span></div>
-            <p class="price-desc">Ongoing clinical pharmacist partnership for telehealth operations.</p>
+            <p class="price-desc">Ongoing clinical pharmacist partnership for telehealth operations and healthcare businesses.</p>
             <ul class="price-features">
               <li><i class="fa-solid fa-check"></i>4 consult calls/month</li>
               <li><i class="fa-solid fa-check"></i>Medication review services</li>
               <li><i class="fa-solid fa-check"></i>Patient education materials</li>
               <li><i class="fa-solid fa-check"></i>MTM support</li>
             </ul>
-            <button class="btn-cta" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-arrow-right"></i> Get Started</button>
+            <button class="btn-waitlist" onclick="openWaitlist('Healthcare Partner Retainer — $250/mo')"><i class="fa-solid fa-bell"></i> Join Waitlist</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-
+<div class="wl-overlay" id="waitlistModal" onclick="if(event.target===this)closeWaitlist()"><div class="wl-box"><button class="wl-close" onclick="closeWaitlist()">✕</button><div class="wl-icon"><i class="fa-solid fa-bell"></i></div><h3>Join the Waitlist</h3><span class="wl-service-tag" id="waitlistService">Service</span><p>Be first notified when this service launches.</p><input class="wl-input" id="waitlistName" type="text" placeholder="Your name"/><input class="wl-input" id="waitlistEmail" type="email" placeholder="Your email address"/><button class="btn-wl-submit" onclick="submitWaitlist()"><i class="fa-solid fa-paper-plane"></i> Join Waitlist</button><p class="wl-note"><i class="fa-solid fa-lock" style="color:var(--emerald3);"></i> No spam. Notified only when bookings open.</p></div></div>
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-brand">Dr. <span>Sunny B</span></div><div class="footer-tagline">"Clinical expertise without the waiting room."<br/>PharmD · Clinical Consultant · Digital Strategist<br/>California · drsunnybrph.com</div>
-      <div style="margin-top:8px;"><a href="mailto:sunny@drsunnybrph.com" style="color:rgba(255,255,255,.45);font-size:.77rem;text-decoration:none;font-family:'Inter',sans-serif;transition:color .2s;" onmouseover="this.style.color='var(--emerald4)'" onmouseout="this.style.color='rgba(255,255,255,.45)'"><i class="fa-solid fa-envelope" style="font-size:.7rem;color:var(--emerald4);margin-right:5px;"></i>sunny@drsunnybrph.com</a></div>
+      <div>
+        <div class="footer-brand">Dr. Sunny B <span>Pharmacist Consulting</span></div>
+        <div class="footer-tagline">"Clinical expertise without the waiting room."<br/>Owned &amp; operated by Amrinder Bhandal, PharmD<br/>Specialist in Clinical Strategy &amp; Healthcare Operations<br/>Serving Solano County &amp; Ventura County, California</div>
+        <div style="margin-top:10px;"><a href="mailto:drsunnybrph@gmail.com" style="color:rgba(255,255,255,.45);font-size:.77rem;text-decoration:none;font-family:'Inter',sans-serif;"><i class="fa-solid fa-envelope" style="font-size:.7rem;color:var(--emerald4);margin-right:5px;"></i>drsunnybrph@gmail.com</a></div>
       </div>
       <div class="footer-col"><h4>Clinical</h4><ul>
         <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li>
@@ -140,12 +139,14 @@
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-legal">© 2025 Dr. Sunny B Consulting · All rights reserved<br/>Services provided by a CA licensed pharmacist within CA Board of Pharmacy scope of practice. Content is educational and does not constitute medical advice, diagnosis, or a patient-provider relationship unless explicitly established. Prescription travel medications pending CPA. Not a substitute for emergency care.</div>
+      <div>
+        <div class="footer-legal">© 2025 Dr. Sunny B Pharmacist Consulting · All rights reserved · Amrinder Bhandal, PharmD · CA BOP License Active<br/>Clinical services governed by California Business and Professions Code § 4052.9. Consultation and Medication Furnishing Only. No on-site vaccinations. Professional referrals provided for all required immunizations.<br/>Prescription services pending CPA finalization. Content is educational and does not constitute medical advice, diagnosis, or a patient-provider relationship. Not a substitute for emergency care.</div>
+        <div class="footer-legal-extended">This clinical practice is owned and operated by Amrinder Bhandal, PharmD. All service agreements and protocols are structured for seamless succession to a California Professional Corporation as permitted by the Moscone-Knox Professional Corporation Act.</div>
+      </div>
       <div class="footer-love"><i class="fa-solid fa-pills"></i> Clinical expertise without the waiting room.</div>
     </div>
   </div>
 </footer>
-
 <script type="text/javascript">
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
   Cal("init", "web-consult", {origin:"https://app.cal.com"});
