@@ -3,15 +3,61 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Book an Appointment | Dr. Sunny B Pharmacist Consulting | Solano & Ventura County CA</title>
-<meta name="description" content="Book a web consulting call with Dr. Sunny B Pharmacist Consulting — active now. Clinical services (Travel Health, Supplements, Health Coaching) are in development — join the waitlist. Serving Solano County and Ventura County, California."/>
-<meta property="og:title" content="Book | Dr. Sunny B Pharmacist Consulting"/>
+<title>Book a Travel Health Consultation | Dr. Sunny B, PharmD | California</title>
+<meta name="description" content="Reserve a virtual travel health consultation with Amrinder Bhandal, PharmD. Secure prepayment at booking, intake sent automatically, and travel-medication furnishing for patients across California."/>
+<meta property="og:title" content="Book a Travel Health Consultation | Dr. Sunny B, PharmD"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://drsunnybrph.com/book.html"/>
 <link rel="canonical" href="https://drsunnybrph.com/book.html"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
+<style>
+/* ─── PREMIUM BOOKING (scoped: bk-) ─── */
+.bk-wrap{max-width:1000px;margin:0 auto;}
+.bk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+@media(max-width:880px){.bk-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto;}}
+.bk-card{position:relative;background:#fff;border:1.5px solid var(--gray4);border-radius:24px;padding:34px 28px;
+  display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s,border-color .22s;box-shadow:var(--shadow);}
+.bk-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2);border-color:var(--mint2);}
+.bk-card.feat{background:linear-gradient(160deg,var(--forest),var(--emerald) 70%,#04453a);color:#fff;border-color:transparent;box-shadow:0 26px 64px rgba(6,78,59,.32);}
+.bk-card.feat::before{content:'';position:absolute;inset:0;border-radius:24px;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+.bk-feat-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#D9B45A,#C8973A);color:#3a2c08;font-size:.66rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:50px;white-space:nowrap;box-shadow:0 6px 16px rgba(200,151,58,.4);z-index:3;}
+.bk-card>*{position:relative;z-index:2;}
+.bk-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;background:var(--mint);color:var(--emerald2);}
+.bk-card.feat .bk-icon{background:rgba(255,255,255,.12);color:#D9B45A;}
+.bk-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;line-height:1.1;margin-bottom:4px;}
+.bk-dur{font-size:.74rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray2);font-weight:600;margin-bottom:14px;}
+.bk-card.feat .bk-dur{color:rgba(255,255,255,.55);}
+.bk-price{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--forest);line-height:1;margin-bottom:16px;}
+.bk-card.feat .bk-price{color:#fff;}
+.bk-price small{font-size:.8rem;font-family:'Inter',sans-serif;color:var(--gray2);font-weight:500;}
+.bk-card.feat .bk-price small{color:rgba(255,255,255,.5);}
+.bk-feats{list-style:none;padding:0;margin:0 0 24px;flex:1;}
+.bk-feats li{display:flex;gap:9px;align-items:flex-start;font-size:.83rem;line-height:1.5;padding:6px 0;color:var(--gray);}
+.bk-card.feat .bk-feats li{color:rgba(255,255,255,.82);}
+.bk-feats i{color:var(--emerald3);margin-top:3px;flex-shrink:0;font-size:.8rem;}
+.bk-card.feat .bk-feats i{color:#D9B45A;}
+.bk-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;border-radius:50px;padding:14px;
+  font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;cursor:pointer;transition:all .2s;
+  background:var(--mint);color:var(--emerald);border:1.5px solid var(--mint2);}
+.bk-btn:hover{background:var(--emerald);color:#fff;border-color:var(--emerald);}
+.bk-card.feat .bk-btn{background:#fff;color:var(--forest);border:1.5px solid rgba(217,180,90,.5);}
+.bk-card.feat .bk-btn:hover{background:#D9B45A;color:#3a2c08;border-color:#D9B45A;}
+
+/* step rail */
+.bk-rail{margin-top:64px;}
+.bk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;}
+@media(max-width:780px){.bk-steps{grid-template-columns:1fr 1fr;}}
+@media(max-width:460px){.bk-steps{grid-template-columns:1fr;}}
+.bk-step{background:#fff;border:1.5px solid var(--gray4);border-radius:18px;padding:24px 20px;position:relative;}
+.bk-step-n{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#D9B45A;line-height:1;}
+.bk-step h4{font-size:.92rem;font-weight:700;color:var(--text);margin:8px 0 5px;}
+.bk-step p{font-size:.8rem;color:var(--gray);line-height:1.55;}
+.bk-secure{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:30px;color:var(--gray2);font-size:.78rem;}
+.bk-secure span{display:flex;align-items:center;gap:7px;}
+.bk-secure i{color:var(--emerald3);}
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -21,16 +67,7 @@
   </a>
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
-    <li class="nav-item" id="ddServices">
-      <button class="nav-link" data-nav="services" onclick="toggleDropdown('ddServices')">Services <span class="chevron">▾</span></button>
-      <div class="dropdown">
-        <a class="dropdown-item" href="travel-health.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-plane-departure"></i></div><div><strong>Travel Health</strong><small>Virtual consults</small></div></a>
-        <a class="dropdown-item" href="supplements.html"><div class="di-icon" style="background:var(--mint);color:var(--emerald2);"><i class="fa-solid fa-leaf"></i></div><div><strong>Supplement Consults</strong><small>OTC &amp; nutraceuticals</small></div></a>
-        <a class="dropdown-item" href="health-coaching.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-dumbbell"></i></div><div><strong>Health Coaching</strong><small>Fitness &amp; wellness</small></div></a>
-        <a class="dropdown-item" href="web-consulting.html"><div class="di-icon" style="background:var(--slate3);color:var(--slate2);"><i class="fa-solid fa-laptop-code"></i></div><div><strong>Web Consulting</strong><small>Sites &amp; strategy</small></div></a>
-        <a class="dropdown-item" href="retainer.html"><div class="di-icon" style="background:var(--orange4);color:var(--orange);"><i class="fa-solid fa-clipboard-list"></i></div><div><strong>Retainer Plans</strong><small>Monthly support</small></div></a>
-      </div>
-    </li>
+    <li class="nav-item"><a class="nav-link" href="travel-health.html" data-nav="travel">Travel Health</a></li>
     <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
     <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
     <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
@@ -41,108 +78,127 @@
   <div class="page-hero">
     <div class="page-hero-inner">
       <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Scheduling</span>
-      <h1>Book Your <em>Appointment</em></h1>
-      <p>Web consulting is active and booking now. Clinical services are in development — join the waitlist to be first notified when they launch.</p>
+      <h1>Reserve Your <em>Consultation</em></h1>
+      <p>Choose the consult that fits your trip. You'll pick a time, prepay securely, and receive your intake form and video link automatically — all in one short flow. Available in English, Punjabi, and Hindi for travelers across California.</p>
     </div>
   </div>
 
   <section>
-    <div class="container">
+    <div class="bk-wrap">
 
-      <!-- Two-track system -->
-      <div class="cards-grid" style="margin-bottom:48px;">
-        <div class="card" style="border-top:3px solid var(--emerald3);">
-          <div class="card-icon ci-green"><i class="fa-solid fa-laptop-code"></i></div>
-          <h3>Web Consulting — Active Now</h3>
-          <p>Digital strategy, website builds, and retainer plans for healthcare professionals and small businesses. Free 30-min strategy call to scope your project.</p>
-          <div class="tag-row" style="margin-bottom:16px;"><span class="badge b-green">Booking Now</span><span class="badge b-green">Free Intro Call</span></div>
-          <button class="btn-green" data-cal-namespace="web-consult" data-cal-link="drsunnyb/web-consult" data-cal-config='{"layout":"month_view"}'><i class="fa-solid fa-calendar-check"></i> Book Free Strategy Call</button>
+      <div class="center" style="margin-bottom:34px;">
+        <span class="eyebrow">Choose Your Consult</span>
+        <h2 class="section-title">Three Ways to <em>Travel Ready</em></h2>
+      </div>
+
+      <!-- NOTE: replace each href with your Square Appointments booking link (one per service). -->
+      <div class="bk-grid">
+        <div class="bk-card">
+          <div class="bk-icon"><i class="fa-solid fa-earth-americas"></i></div>
+          <div class="bk-name">Standard Consult</div>
+          <div class="bk-dur">30 minutes</div>
+          <div class="bk-price">$75</div>
+          <ul class="bk-feats">
+            <li><i class="fa-solid fa-check"></i>Single-destination risk assessment</li>
+            <li><i class="fa-solid fa-check"></i>Vaccine counseling &amp; clinic referral</li>
+            <li><i class="fa-solid fa-check"></i>OTC medication guidance</li>
+            <li><i class="fa-solid fa-check"></i>Written travel plan</li>
+            <li><i class="fa-solid fa-check"></i>Eligible medication furnishing</li>
+          </ul>
+          <a class="bk-btn" href="https://book.squareup.com/appointments/drsunnyb" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
         </div>
-        <div class="card coming-soon" style="border-top:3px dashed var(--orange3);">
-          <div class="coming-soon-badge"><i class="fa-solid fa-clock"></i> Coming Soon</div>
-          <div class="card-icon ci-orange"><i class="fa-solid fa-plane-departure"></i></div>
-          <h3>Clinical Services — Waitlist</h3>
-          <p>Travel Health, Supplement Audits, and Performance Optimization are in development pending CPA finalization. Join the waitlist for priority access and early-bird pricing.</p>
-          <div class="tag-row" style="margin-bottom:16px;"><span class="badge b-orange">Pending CPA</span></div>
-          <a class="btn-waitlist"  href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-bell"></i> Join Clinical Waitlist</a>
+
+        <div class="bk-card feat">
+          <div class="bk-feat-badge">Most Popular</div>
+          <div class="bk-icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="bk-name">Comprehensive</div>
+          <div class="bk-dur">60 minutes</div>
+          <div class="bk-price">$125</div>
+          <ul class="bk-feats">
+            <li><i class="fa-solid fa-check"></i>Everything in Standard</li>
+            <li><i class="fa-solid fa-check"></i>Multi-destination planning</li>
+            <li><i class="fa-solid fa-check"></i>Food &amp; water safety deep-dive</li>
+            <li><i class="fa-solid fa-check"></i>Vaccine schedule coordination</li>
+            <li><i class="fa-solid fa-check"></i>Full travel-medication furnishing</li>
+            <li><i class="fa-solid fa-check"></i>Follow-up message included</li>
+          </ul>
+          <a class="bk-btn" href="https://book.squareup.com/appointments/drsunnyb" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
+        </div>
+
+        <div class="bk-card">
+          <div class="bk-icon"><i class="fa-solid fa-people-group"></i></div>
+          <div class="bk-name">Family Package</div>
+          <div class="bk-dur">60 minutes · up to 4</div>
+          <div class="bk-price">$199</div>
+          <ul class="bk-feats">
+            <li><i class="fa-solid fa-check"></i>Everything in Comprehensive</li>
+            <li><i class="fa-solid fa-check"></i>Up to 4 family members</li>
+            <li><i class="fa-solid fa-check"></i>Pediatric considerations</li>
+            <li><i class="fa-solid fa-check"></i>Shared written summary</li>
+          </ul>
+          <a class="bk-btn" href="https://book.squareup.com/appointments/drsunnyb" target="_blank" rel="noopener"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
         </div>
       </div>
 
-      <!-- Web Consulting Calendar -->
-      <div style="margin-bottom:56px;">
-        <span class="eyebrow">Web Consulting — Book Now</span>
-        <h2 class="section-title">Schedule a Free <em>Strategy Call</em></h2>
-        <div style="background:white;border-radius:20px;box-shadow:var(--shadow2);overflow:hidden;border:1.5px solid var(--gray4);min-height:660px;margin-top:28px;">
-          <div id="my-cal-inline"></div>
-        </div>
-        <p style="text-align:center;font-size:.78rem;color:var(--gray2);margin-top:16px;display:flex;align-items:center;justify-content:center;gap:6px;">
-          <i class="fa-solid fa-laptop-code" style="color:var(--emerald3);"></i> Web consulting calls only. Clinical bookings open once CPA is finalized.
-          <a href="https://cal.com/drsunnyb" target="_blank" style="color:var(--emerald2);font-weight:600;margin-left:4px;">Open in new tab</a>
-        </p>
+      <div class="bk-secure">
+        <span><i class="fa-solid fa-lock"></i> Secure prepayment at booking</span>
+        <span><i class="fa-solid fa-bell"></i> Instant confirmation &amp; reminders</span>
+        <span><i class="fa-solid fa-video"></i> Private video visit</span>
       </div>
 
-      <!-- Clinical Waitlist -->
-      <div class="schedule-box">
-        <h2>Clinical Services — <em>Join the Waitlist</em></h2>
-        <p>Travel Health, Supplement Audits, and Performance Optimization launch once our CPA is finalized. Early waitlist members receive priority booking and early-bird pricing.</p>
-        <div class="schedule-btns">
-          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-plane-departure"></i> Travel Health Waitlist</button>
-          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-leaf"></i> Supplement Audit Waitlist</button>
-          <a class="" href="https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link" target="_blank" rel="noopener"><i class="fa-solid fa-dumbbell"></i> Performance Coaching Waitlist</button>
+      <div class="bk-rail">
+        <div class="center">
+          <span class="eyebrow">What Happens Next</span>
+          <h2 class="section-title">From Reserve to <em>Bon Voyage</em></h2>
+        </div>
+        <div class="bk-steps">
+          <div class="bk-step"><div class="bk-step-n">01</div><h4>Reserve &amp; Prepay</h4><p>Pick a time and pay securely by card. You'll get instant confirmation and reminders.</p></div>
+          <div class="bk-step"><div class="bk-step-n">02</div><h4>Complete Intake</h4><p>A secure pre-travel health form arrives by email and is reviewed before your visit.</p></div>
+          <div class="bk-step"><div class="bk-step-n">03</div><h4>Video Consult</h4><p>Your visit with Dr. Bhandal — destination risk assessment in English, Punjabi, or Hindi.</p></div>
+          <div class="bk-step"><div class="bk-step-n">04</div><h4>Travel Ready</h4><p>Written plan, vaccine referrals, and eligible medications sent to your chosen pharmacy.</p></div>
         </div>
       </div>
+
+      <div class="highlight-box" style="margin-top:40px;">
+        <p><i class="fa-solid fa-circle-info"></i><span><strong>Before your visit:</strong> have your itinerary, travel dates, current medications, allergies, and your preferred pharmacy ready — that's where any eligible medications will be sent. Questions first? Email <a href="mailto:drsunnybrph@gmail.com" style="color:var(--forest);font-weight:700;">drsunnybrph@gmail.com</a>.</span></p>
+      </div>
+
     </div>
   </section>
 </main>
-
-
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "drsunnyb", {origin:"https://app.cal.com"});
-  Cal.ns["drsunnyb"]("inline", {
-    elementOrSelector:"#my-cal-inline",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "drsunnyb",
-  });
-  Cal.ns["drsunnyb"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-  Cal("init", "web-consult", {origin:"https://app.cal.com"});
-  Cal.ns["web-consult"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
 
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Dr. Sunny B <span>Pharmacist Consulting</span></div>
-        <div class="footer-tagline">"Clinical expertise without the waiting room."<br/>Owned &amp; operated by Amrinder Bhandal, PharmD<br/>Specialist in Clinical Strategy &amp; Healthcare Operations<br/>Serving Solano County &amp; Ventura County, California</div>
+        <div class="footer-brand">Dr. Sunny B <span>Travel Health</span></div>
+        <div class="footer-tagline">"Clinical expertise without the waiting room."<br/>Amrinder Bhandal, PharmD — Licensed California Pharmacist<br/>Independent travel-medicine consultations &amp; medication furnishing<br/>Telehealth across California · Based in Solano &amp; Ventura County</div>
         <div style="margin-top:10px;"><a href="mailto:drsunnybrph@gmail.com" style="color:rgba(255,255,255,.45);font-size:.77rem;text-decoration:none;font-family:'Inter',sans-serif;"><i class="fa-solid fa-envelope" style="font-size:.7rem;color:var(--emerald4);margin-right:5px;"></i>drsunnybrph@gmail.com</a></div>
       </div>
-      <div class="footer-col"><h4>Clinical</h4><ul>
-        <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Travel Health</a></li>
-        <li><a href="supplements.html"><i class="fa-solid fa-leaf"></i>Supplement Consults</a></li>
-        <li><a href="health-coaching.html"><i class="fa-solid fa-dumbbell"></i>Health Coaching</a></li>
+      <div class="footer-col"><h4>Travel Health</h4><ul>
+        <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Consultations</a></li>
+        <li><a href="travel-health.html#pricing"><i class="fa-solid fa-tag"></i>Pricing</a></li>
+        <li><a href="travel-health.html#how"><i class="fa-solid fa-list-check"></i>How It Works</a></li>
       </ul></div>
-      <div class="footer-col"><h4>Digital</h4><ul>
-        <li><a href="web-consulting.html"><i class="fa-solid fa-laptop-code"></i>Web Consulting</a></li>
-        <li><a href="retainer.html"><i class="fa-solid fa-gear"></i>Retainer Plans</a></li>
-        <li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Book &amp; Pay</h4><ul>
-        <li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book Appointment</a></li>
+      <div class="footer-col"><h4>Practice</h4><ul>
+        <li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About Dr. Sunny B</a></li>
+        <li><a href="book.html"><i class="fa-solid fa-calendar-check"></i>Book a Consult</a></li>
         <li><a href="pay.html"><i class="fa-solid fa-credit-card"></i>Pay Now</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:drsunnybrph@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
         <li><a href="pay.html"><i class="fa-solid fa-at"></i>@drsunnybrph</a></li>
+        <li><a href="book.html"><i class="fa-solid fa-clock"></i>Schedule Online</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
       <div>
-        <div class="footer-legal">© 2025 Dr. Sunny B Pharmacist Consulting · All rights reserved · Amrinder Bhandal, PharmD · CA BOP License Active<br/>Clinical services governed by California Business and Professions Code § 4052.9. Consultation and Medication Furnishing Only. No on-site vaccinations. Professional referrals provided for all required immunizations.<br/>Prescription services pending CPA finalization. Content is educational and does not constitute medical advice, diagnosis, or a patient-provider relationship. Not a substitute for emergency care.</div>
-        <div class="footer-legal-extended">This clinical practice is owned and operated by Amrinder Bhandal, PharmD. All service agreements and protocols are structured for seamless succession to a California Professional Corporation as permitted by the Moscone-Knox Professional Corporation Act.</div>
+        <div class="footer-legal">© 2026 Dr. Sunny B Travel Health · Amrinder Bhandal, PharmD · California Pharmacist License #88397 (active).<br/>Travel medications are furnished under independent pharmacist authority pursuant to California Business &amp; Professions Code § 4052(a)(10)(A)(3) and 16 CCR § 1746.5 — no collaborative practice agreement required. Furnishing is limited to CDC-recommended travel medications that do not require a diagnosis. Services are available to patients physically located in California. No on-site vaccinations; required immunizations are referred to a local clinic. Educational content only — not a substitute for emergency care or your primary care provider.</div>
       </div>
-      <div class="footer-love"><i class="fa-solid fa-pills"></i> Clinical expertise without the waiting room.</div>
+      <div class="footer-love"><i class="fa-solid fa-plane-departure"></i> Clinical expertise without the waiting room.</div>
     </div>
   </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>

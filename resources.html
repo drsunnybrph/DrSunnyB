@@ -4,80 +4,31 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Resources | Dr. Sunny B — Internal</title>
-<!-- No index for search engines -->
 <meta name="robots" content="noindex, nofollow"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <style>
-/* ─── PASSWORD GATE ─── */
-#gate{
-  position:fixed;inset:0;z-index:9999;
-  background:linear-gradient(150deg,var(--forest) 0%,var(--emerald) 100%);
-  display:flex;align-items:center;justify-content:center;
-  padding:20px;
-}
-#gate::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
-  background-size:32px 32px;
-}
-.gate-box{
-  background:white;border-radius:24px;padding:48px 40px;
-  max-width:420px;width:100%;text-align:center;
-  box-shadow:0 24px 64px rgba(0,0,0,.3);
-  position:relative;z-index:1;
-}
-.gate-icon{
-  width:64px;height:64px;
-  background:linear-gradient(135deg,var(--emerald),var(--emerald3));
-  border-radius:18px;display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;
-}
+#gate{position:fixed;inset:0;z-index:9999;background:linear-gradient(150deg,var(--forest) 0%,var(--emerald) 100%);display:flex;align-items:center;justify-content:center;padding:20px;}
+#gate::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px;}
+.gate-box{background:white;border-radius:24px;padding:48px 40px;max-width:420px;width:100%;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.3);position:relative;z-index:1;}
+.gate-icon{width:64px;height:64px;background:linear-gradient(135deg,var(--emerald),var(--emerald3));border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
 .gate-icon i{font-size:1.8rem;color:white;}
-.gate-box h2{
-  font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;
-  color:var(--text);margin-bottom:6px;
-}
+.gate-box h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:6px;}
 .gate-box p{font-size:.85rem;color:var(--gray);margin-bottom:28px;line-height:1.6;}
 .gate-input-wrap{position:relative;margin-bottom:16px;}
-.gate-input-wrap input{
-  width:100%;border:2px solid var(--gray4);border-radius:12px;
-  padding:13px 48px 13px 16px;font-family:'Inter',sans-serif;
-  font-size:.95rem;color:var(--text);outline:none;
-  transition:border-color .2s;background:var(--cream);
-  letter-spacing:.15em;
-}
+.gate-input-wrap input{width:100%;border:2px solid var(--gray4);border-radius:12px;padding:13px 48px 13px 16px;font-family:'Inter',sans-serif;font-size:.95rem;color:var(--text);outline:none;transition:border-color .2s;background:var(--cream);letter-spacing:.15em;}
 .gate-input-wrap input:focus{border-color:var(--emerald3);background:white;}
 .gate-input-wrap input.error{border-color:#EF4444;animation:shake .3s ease;}
-.gate-toggle{
-  position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  background:none;border:none;color:var(--gray2);cursor:pointer;
-  font-size:.9rem;padding:4px;
-}
+.gate-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gray2);cursor:pointer;font-size:.9rem;padding:4px;}
 .gate-toggle:hover{color:var(--emerald2);}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-.gate-btn{
-  width:100%;background:linear-gradient(135deg,var(--emerald),var(--emerald3));
-  color:white;border:none;border-radius:50px;padding:14px;
-  font-size:.92rem;font-weight:700;cursor:pointer;
-  font-family:'Inter',sans-serif;transition:all .2s;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  box-shadow:0 6px 20px rgba(5,150,105,.25);
-}
+.gate-btn{width:100%;background:linear-gradient(135deg,var(--emerald),var(--emerald3));color:white;border:none;border-radius:50px;padding:14px;font-size:.92rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 20px rgba(5,150,105,.25);}
 .gate-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(5,150,105,.35);}
-.gate-error{
-  font-size:.78rem;color:#EF4444;margin-top:8px;
-  display:none;align-items:center;gap:6px;justify-content:center;
-}
+.gate-error{font-size:.78rem;color:#EF4444;margin-top:8px;display:none;align-items:center;gap:6px;justify-content:center;}
 .gate-error.show{display:flex;}
 #content{display:none;}
-
-/* ─── INTERNAL PAGE STYLES ─── */
-.internal-header{
-  background:linear-gradient(140deg,var(--forest) 0%,var(--emerald) 100%);
-  padding:40px 48px 36px;position:relative;overflow:hidden;
-}
+.internal-header{background:linear-gradient(140deg,var(--forest) 0%,var(--emerald) 100%);padding:40px 48px 36px;position:relative;overflow:hidden;}
 .internal-header::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;}
 .internal-header-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;}
 .internal-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:12px;}
@@ -86,11 +37,16 @@
 .internal-header p{color:rgba(255,255,255,.55);font-size:.85rem;}
 .lock-out-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);border-radius:50px;padding:8px 18px;font-size:.76rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:7px;transition:all .2s;white-space:nowrap;}
 .lock-out-btn:hover{background:rgba(255,255,255,.18);color:white;}
+.chk{list-style:none;padding:0;margin:0;}
+.chk li{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--gray4);font-size:.86rem;color:var(--text);line-height:1.5;}
+.chk li i{margin-top:3px;flex-shrink:0;}
+.chk .done i{color:var(--emerald3);}
+.chk .todo i{color:var(--orange2);}
+.chk small{display:block;color:var(--gray);font-size:.76rem;margin-top:2px;}
 </style>
 </head>
 <body>
 
-<!-- ══ PASSWORD GATE ══ -->
 <div id="gate">
   <div class="gate-box">
     <div class="gate-icon"><i class="fa-solid fa-lock"></i></div>
@@ -108,15 +64,14 @@
   </div>
 </div>
 
-<!-- ══ INTERNAL CONTENT ══ -->
 <div id="content">
 
   <div class="internal-header">
     <div class="internal-header-inner">
       <div>
         <div class="internal-badge"><i class="fa-solid fa-lock" style="font-size:.65rem;"></i> Internal Reference — Not Public</div>
-        <h1>Tools &amp; <em>Resources</em></h1>
-        <p>EMR comparisons, CPA setup notes, and platform recommendations. For your eyes only.</p>
+        <h1>Travel Health <em>Operations</em></h1>
+        <p>No-CPA furnishing model · e-prescribing setup · § 1746.5 readiness. For your eyes only.</p>
       </div>
       <button class="lock-out-btn" onclick="lockOut()"><i class="fa-solid fa-right-from-bracket"></i> Lock Page</button>
     </div>
@@ -124,62 +79,79 @@
 
   <section>
     <div class="container">
-      <span class="eyebrow">EMR Recommendations</span>
-      <h2 class="section-title">Best EMR for a <em>Solo Telehealth Pharmacist</em></h2>
-      <p class="section-sub">Ranked by cost, telehealth capability, intake forms, and ease of solo setup.</p>
-      <div class="emr-grid">
-        <div class="emr-card top"><div class="emr-rec"><i class="fa-solid fa-star"></i> Top Pick</div><div class="emr-name">Jane App</div><div class="emr-price">~$54/month solo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Built-in telehealth (HD video)</li><li><i class="fa-solid fa-check"></i>Online scheduling + reminders</li><li><i class="fa-solid fa-check"></i>Custom intake forms</li><li><i class="fa-solid fa-check"></i>HIPAA-compliant portal</li><li><i class="fa-solid fa-check"></i>Invoicing + payments</li></ul></div>
-        <div class="emr-card top"><div class="emr-rec"><i class="fa-solid fa-star"></i> Current Choice</div><div class="emr-name">Charm EHR</div><div class="emr-price">Free (solo) / $25+/mo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Free solo practice tier</li><li><i class="fa-solid fa-check"></i>Telehealth built in</li><li><i class="fa-solid fa-check"></i>Intake forms + e-signatures</li><li><i class="fa-solid fa-check"></i>Patient portal</li><li><i class="fa-solid fa-check"></i>HIPAA compliant</li></ul></div>
-        <div class="emr-card"><div class="emr-name">Practice Fusion</div><div class="emr-price">$199/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>ONC-certified EHR</li><li><i class="fa-solid fa-check"></i>Telehealth add-on</li><li><i class="fa-solid fa-check"></i>E-prescribing</li><li><i class="fa-solid fa-check"></i>Best for CPA prescribing</li></ul></div>
-        <div class="emr-card"><div class="emr-name">DrChrono</div><div class="emr-price">~$199–499/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>iOS-first, great on iPhone</li><li><i class="fa-solid fa-check"></i>Telehealth built in</li><li><i class="fa-solid fa-check"></i>Custom intake forms</li><li><i class="fa-solid fa-check"></i>E-prescribing</li></ul></div>
-        <div class="emr-card"><div class="emr-name">Cal.com + Doxy.me</div><div class="emr-price">Free combo</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Cal.com: free scheduling</li><li><i class="fa-solid fa-check"></i>Doxy.me: free HIPAA video</li><li><i class="fa-solid fa-check"></i>Google Forms for intake</li><li><i class="fa-solid fa-check"></i>Zero-cost startup option</li></ul></div>
-        <div class="emr-card"><div class="emr-name">OptiMantra</div><div class="emr-price">~$99/month</div><ul class="emr-features"><li><i class="fa-solid fa-check"></i>Best for wellness/functional</li><li><i class="fa-solid fa-check"></i>Telehealth + scheduling</li><li><i class="fa-solid fa-check"></i>Lab integration</li><li><i class="fa-solid fa-check"></i>Good supplement workflow</li></ul></div>
+
+      <div class="highlight-box">
+        <p><i class="fa-solid fa-circle-check"></i><span><strong>The model in one line:</strong> Independent travel-medication furnishing under <strong>BPC § 4052(a)(10)(A)(3)</strong> + <strong>16 CCR § 1746.5</strong>. No CPA. No supervising physician. CA patients only. You furnish (clinically authorize) and transmit the order to the patient's retail pharmacy — they dispense. EliteMetabolix coaching stays entirely off this domain.</span></p>
       </div>
-      <div class="highlight-box" style="margin-top:36px;"><p><i class="fa-solid fa-lightbulb"></i><span><strong>Current plan:</strong> Use <strong>Charm EHR (free)</strong> for intake forms, records, and telehealth. Use <strong>Cal.com (free)</strong> for web consulting. Clinical bookings activate once CPA signed — update all waitlist buttons to Cal.com popup buttons at that time. No HIPAA BAA needed on the scheduler since no PHI is collected during booking (PHI goes to Charm). Upgrade to <strong>Jane App (~$54/mo)</strong> once hitting 10+ monthly patients.</span></p></div>
+
+      <div style="margin-top:44px;">
+        <span class="eyebrow">Readiness</span>
+        <h2 class="section-title">§ 1746.5 <em>Checklist</em></h2>
+        <p class="section-sub">All of these must be documented and available for Board inspection before you furnish a single travel med.</p>
+        <ul class="chk" style="margin-top:18px;">
+          <li class="done"><i class="fa-solid fa-circle-check"></i><div>Immunization training program — § 4052.8(b)(1) <small>You have this. Keep the certificate on file.</small></div></li>
+          <li class="done"><i class="fa-solid fa-circle-check"></i><div>10-hour travel-medicine training (ISTM Body of Knowledge) <small>You have this. Keep the certificate on file.</small></div></li>
+          <li class="todo"><i class="fa-solid fa-triangle-exclamation"></i><div>CDC Yellow Fever Vaccine Course <small>Explicitly required by § 1746.5(c)(3) even though you refer YF out. Confirm completion or take it before launch.</small></div></li>
+          <li class="todo"><i class="fa-solid fa-triangle-exclamation"></i><div>Current Basic Life Support (BLS) certification <small>Required by § 1746.5(c)(4). Confirm it's active.</small></div></li>
+          <li class="todo"><i class="fa-solid fa-triangle-exclamation"></i><div>2 hours travel-medicine CE every 2 years <small>Required by § 1746.5(d), separate from immunization CE. This is the one you flagged — complete before furnishing.</small></div></li>
+          <li class="todo"><i class="fa-solid fa-triangle-exclamation"></i><div>Individual Type 1 NPI <small>Free at nppes.cms.hhs.gov. Required to be identified as the furnisher on any transmitted order.</small></div></li>
+        </ul>
+      </div>
 
       <div style="margin-top:52px;">
-        <span class="eyebrow">Scheduling Stack</span>
-        <h2 class="section-title">Platform <em>Decision Map</em></h2>
-        <div class="cards-grid">
-          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-calendar-days"></i></div><h3>Cal.com — All Bookings</h3><p>All services (travel health, supplements, health coaching, web consulting) booked through Cal.com. Free. No HIPAA BAA needed since no PHI collected at booking — that goes to Charm. Patient books → auto-sends Charm intake link.</p></div>
-          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-file-medical"></i></div><h3>Charm EHR — Records + Telehealth</h3><p>All clinical intake forms here. Do not use Google Forms for health info — not HIPAA. Patient completes Charm form before visit. Use Charm's built-in video for the actual appointment.</p></div>
-          <div class="card" style="border-top:3px solid var(--slate2);"><div class="card-icon ci-slate"><i class="fa-solid fa-laptop-code"></i></div><h3>Charm EHR — Intake &amp; Records Only</h3><p>After booking on Cal.com, patient receives a Charm EHR link for HIPAA-secure intake. All clinical records stored here. Do NOT collect PHI through Cal.com booking forms.</p></div>
+        <span class="eyebrow">The Core Question</span>
+        <h2 class="section-title">Furnishing From Your <em>Laptop to CVS</em></h2>
+        <p class="section-sub">You are not dispensing — you have no pharmacy permit or inventory. You <strong>furnish</strong> (clinically authorize) and <strong>transmit the order</strong> to the patient's chosen retail pharmacy, which dispenses. Under BPC § 4024, "dispense" includes furnishing upon an order from a pharmacist acting within scope, so a retail pharmacy is legally permitted to fill your furnishing order.</p>
+        <div class="cards-grid" style="margin-top:24px;">
+          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-id-card-clip"></i></div><h3>1. Get credentialed</h3><p>Individual Type 1 NPI (free). None of the standard travel meds are controlled substances, so you do <strong>not</strong> need a DEA number or EPCS identity-proofing — this keeps setup simple.</p></div>
+          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-tower-broadcast"></i></div><h3>2. Get an e-Rx tool</h3><p>A Surescripts-connected e-prescribing tool where you enroll as the prescriber/furnisher: standalone (DoseSpot, ScriptSure, iPrescribe) or inside an EHR (Practice Fusion ~$199/mo, DrChrono). This is the laptop-to-pharmacy pipe.</p></div>
+          <div class="card"><div class="card-icon ci-slate"><i class="fa-solid fa-paper-plane"></i></div><h3>3. Transmit the order</h3><p>In the tool, pick the patient's pharmacy by name/address, select the drug + sig + qty, and send. Your name, license #88397, and NPI ride on the order. CVS receives it like any prescriber order.</p></div>
+        </div>
+        <div class="highlight-box" style="margin-top:24px;"><p><i class="fa-solid fa-lightbulb"></i><span><strong>Backup path:</strong> If e-Rx isn't set up yet, CA also allows a written or faxed furnishing order (16 CCR § 1717, BPC § 4040/§ 4070) containing all standard Rx elements. Note CA's e-prescribing mandate (AB 2789) makes electronic the default, with documented exceptions — so stand up the e-Rx tool as the primary method. <strong>Practical friction:</strong> some retail techs haven't seen a pharmacist-furnished travel order. A one-line note citing "Furnished per BPC § 4052(a)(10)(A)(3)" and a quick call to the pharmacy clears it up fast.</span></p></div>
+      </div>
+
+      <div style="margin-top:52px;">
+        <span class="eyebrow">Per-Patient Workflow</span>
+        <h2 class="section-title">Every <em>Furnish</em>, Same Steps</h2>
+        <div class="steps-grid">
+          <div class="step-card"><div class="step-num">1</div><h4>Good-faith eval</h4><p>Travel history + destination-specific risk assessment per CDC Yellow Book — § 1746.5(e).</p></div>
+          <div class="step-card"><div class="step-num">2</div><h4>Furnish + transmit</h4><p>Authorize eligible meds and e-send to the patient's pharmacy under your NPI.</p></div>
+          <div class="step-card"><div class="step-num">3</div><h4>Notify PCP (14 days)</h4><p>Notify the PCP within 14 days, or give the patient a written record if none — § 1746.5(f).</p></div>
+          <div class="step-card"><div class="step-num">4</div><h4>Document</h4><p>Keep a patient medication record + give the patient a written clinical assessment and travel plan — § 1746.5(g).</p></div>
         </div>
       </div>
 
       <div style="margin-top:52px;">
-        <span class="eyebrow">CPA Resources</span>
-        <h2 class="section-title">Setting Up Your <em>CPA</em></h2>
+        <span class="eyebrow">Software Stack</span>
+        <h2 class="section-title">Recommended <em>Setup</em></h2>
         <div class="cards-grid">
-          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-file-contract"></i></div><h3>CA Pharmacist CPA</h3><p>Under California B&amp;P Code §4052.1, pharmacists with CPAs can initiate/adjust drug therapy, order labs, and furnish travel medications under standardized procedures.</p></div>
-          <div class="card"><div class="card-icon ci-green"><i class="fa-solid fa-handshake"></i></div><h3>Finding a Collaborating Physician</h3><p>Connect through Doximity, medical groups, or former clinical rotation contacts. The CPA defines your scope — negotiate what services you'll provide. Travel medicine MDs are ideal.</p></div>
-          <div class="card"><div class="card-icon ci-slate"><i class="fa-solid fa-scale-balanced"></i></div><h3>Legal &amp; Compliance</h3><p>CPA must comply with CA BOP regulations. Cannot violate Stark Law or Anti-Kickback Statute. Consult a healthcare attorney before launching Rx services. Update site once CPA is signed.</p></div>
+          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-calendar-days"></i></div><h3>Square Appointments — Booking + Prepay</h3><p>All consults booked here. Free for solo. Collects prepayment by card at booking (same Square ecosystem as your payments). No PHI at the booking step — that goes to Charm — so no BAA needed on the scheduler.</p></div>
+          <div class="card" style="border-top:3px solid var(--emerald3);"><div class="card-icon ci-green"><i class="fa-solid fa-file-medical"></i></div><h3>Charm EHR — Records + Video</h3><p>HIPAA-secure intake, the travel history, the visit (built-in video), and the patient medication record. Do not use Google Forms for any health info.</p></div>
+          <div class="card" style="border-top:3px solid var(--slate2);"><div class="card-icon ci-slate"><i class="fa-solid fa-tower-broadcast"></i></div><h3>e-Rx — Transmission</h3><p>DoseSpot/ScriptSure standalone, or e-Rx inside Practice Fusion/DrChrono. This is the only piece the old supplement/coaching plan didn't need — it's what makes furnishing real.</p></div>
         </div>
-        <div class="highlight-box" style="margin-top:24px;"><p><i class="fa-solid fa-triangle-exclamation" style="color:var(--orange2);"></i><span><strong>Site update checklist once CPA is secured (BPC § 4052.9):</strong> (1) Update travel-health.html disclaimer to confirm CPA is in place. (2) Add "Prescription coordination" back to Comprehensive plan features. (3) Add malaria prophylaxis as a listed service. (4) Update the "coming soon" callout to "now available." (5) Update resources.html notes.</span></p></div>
       </div>
+
+      <div class="highlight-box" style="margin-top:36px;"><p><i class="fa-solid fa-triangle-exclamation" style="color:var(--orange2);"></i><span><strong>Compliance guardrails:</strong> (1) CA patients only — confirm the patient is physically in California at the time of service. (2) Furnish only CDC-recommended travel meds that don't require a diagnosis; anything diagnostic is out of scope without a CPA. (3) Keep the EliteMetabolix coaching brand on a <strong>separate domain</strong> with its own non-clinical disclaimers — never cross-link it from the licensed travel-health pages, which is exactly the consumer-confusion concern the Board hinted at. (4) Consider a healthcare attorney review of the furnishing protocol + intake language before the first paid furnish.</span></p></div>
+
     </div>
   </section>
 
   <div style="padding:24px 40px;border-top:1px solid var(--gray4);margin-top:40px;background:var(--gray3);">
     <p style="font-size:.68rem;color:var(--gray2);line-height:1.8;">
-      <strong>Dr. Sunny B Pharmacist Consulting</strong> · Internal Reference Only · Amrinder Bhandal, PharmD<br/>
-      Clinical services governed by California Business and Professions Code § 4052.9.<br/>
-      This clinical practice is owned and operated by Amrinder Bhandal, PharmD. All service agreements and protocols are structured for seamless succession to a California Professional Corporation as permitted by the Moscone-Knox Professional Corporation Act.
+      <strong>Dr. Sunny B Travel Health</strong> · Internal Reference Only · Amrinder Bhandal, PharmD · CA License #88397<br/>
+      Furnishing authority: California Business &amp; Professions Code § 4052(a)(10)(A)(3) and 16 CCR § 1746.5. No collaborative practice agreement.<br/>
+      This summary is operational notes, not legal advice. Verify current Board requirements before launch.
     </p>
   </div>
-</div><!-- end #content -->
+</div>
 
 <script>
-// ─── CHANGE THIS PASSWORD ───
+// ─── CHANGE THIS PASSWORD (client-side gate only — not real security; don't put true secrets here) ───
 const PASS = 'sunny2025';
-// ────────────────────────────
-
+// ──────────────────────────────────────────────────────────────────────────────────────────────────
 const SESSION_KEY = 'dsb_resources_auth';
 
-// Check if already authenticated this session
-if (sessionStorage.getItem(SESSION_KEY) === 'true') {
-  unlock();
-}
+if (sessionStorage.getItem(SESSION_KEY) === 'true') { unlock(); }
 
 function checkPassword() {
   const input = document.getElementById('pwInput');
@@ -191,41 +163,26 @@ function checkPassword() {
     input.classList.add('error');
     error.classList.add('show');
     input.value = '';
-    setTimeout(() => {
-      input.classList.remove('error');
-      error.classList.remove('show');
-    }, 2000);
+    setTimeout(() => { input.classList.remove('error'); error.classList.remove('show'); }, 2000);
   }
 }
-
 function unlock() {
   document.getElementById('gate').style.display = 'none';
   document.getElementById('content').style.display = 'block';
 }
-
 function lockOut() {
   sessionStorage.removeItem(SESSION_KEY);
   document.getElementById('gate').style.display = 'flex';
   document.getElementById('content').style.display = 'none';
   document.getElementById('pwInput').value = '';
 }
-
 function togglePw() {
   const input = document.getElementById('pwInput');
   const icon = document.getElementById('pwEyeIcon');
-  if (input.type === 'password') {
-    input.type = 'text';
-    icon.className = 'fa-solid fa-eye-slash';
-  } else {
-    input.type = 'password';
-    icon.className = 'fa-solid fa-eye';
-  }
+  if (input.type === 'password') { input.type = 'text'; icon.className = 'fa-solid fa-eye-slash'; }
+  else { input.type = 'password'; icon.className = 'fa-solid fa-eye'; }
 }
-
-// Enter key submits
-document.getElementById('pwInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') checkPassword();
-});
+document.getElementById('pwInput').addEventListener('keydown', e => { if (e.key === 'Enter') checkPassword(); });
 </script>
 </body>
 </html>

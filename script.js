@@ -1,58 +1,38 @@
 // ─── NAV ACTIVE STATE ───
-// Automatically highlights the correct nav link based on current page
+// Highlights the correct nav link based on current page
 document.addEventListener('DOMContentLoaded', () => {
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  const servicePages = ['travel-health.html','supplements.html','web-consulting.html','retainer.html','resources.html'];
-
-  // Highlight exact-match nav links
   document.querySelectorAll('.nav-link[data-nav]').forEach(link => {
     const nav = link.dataset.nav;
-    if (nav === 'home' && (page === 'index.html' || page === '')) link.classList.add('active');
-    if (nav === 'about' && page === 'about.html') link.classList.add('active');
-    if (nav === 'pay' && page === 'pay.html') link.classList.add('active');
-    if (nav === 'book' && page === 'book.html') link.classList.add('active');
-    if (nav === 'services' && servicePages.includes(page)) link.classList.add('active');
+    if (nav === 'home'   && (page === 'index.html' || page === '')) link.classList.add('active');
+    if (nav === 'travel' && page === 'travel-health.html')          link.classList.add('active');
+    if (nav === 'about'  && page === 'about.html')                  link.classList.add('active');
+    if (nav === 'pay'    && page === 'pay.html')                    link.classList.add('active');
+    if (nav === 'book'   && page === 'book.html')                   link.classList.add('active');
   });
-});
-
-// ─── DROPDOWN ───
-function toggleDropdown(id) {
-  const el = document.getElementById(id);
-  const isOpen = el.classList.contains('open');
-  closeDropdowns();
-  if (!isOpen) el.classList.add('open');
-}
-
-function closeDropdowns() {
-  document.querySelectorAll('.nav-item.open').forEach(i => i.classList.remove('open'));
-}
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', e => {
-  if (!e.target.closest('.nav-item')) closeDropdowns();
 });
 
 // ─── MOBILE MENU ───
 function toggleMobileMenu() {
   const menu = document.getElementById('navMenu');
-  const btn = document.getElementById('hamburger');
+  const btn  = document.getElementById('hamburger');
   const isOpen = menu.classList.toggle('mobile-open');
   btn.textContent = isOpen ? '✕' : '☰';
 }
 
 function closeMobileMenu() {
   const menu = document.getElementById('navMenu');
-  const btn = document.getElementById('hamburger');
+  const btn  = document.getElementById('hamburger');
   if (menu) menu.classList.remove('mobile-open');
-  if (btn) btn.textContent = '☰';
+  if (btn)  btn.textContent = '☰';
 }
 
-// Escape key closes everything
+// Escape key closes the mobile menu
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeDropdowns(); closeMobileMenu(); }
+  if (e.key === 'Escape') closeMobileMenu();
 });
 
-// ─── COPY TO CLIPBOARD (Zelle handle) ───
+// ─── COPY TO CLIPBOARD (payment handles) ───
 function copyToClipboard(text, btnId) {
   const btn = document.getElementById(btnId);
   const original = btn.innerHTML;
@@ -81,21 +61,7 @@ function fallbackCopy(text, callback) {
   document.body.appendChild(el);
   el.focus();
   el.select();
-  try { document.execCommand('copy'); } catch(e) {}
+  try { document.execCommand('copy'); } catch (e) {}
   document.body.removeChild(el);
   if (callback) callback();
 }
-
-// ─── WAITLIST ───
-// All "Join Waitlist" buttons now link directly to Google Form.
-// No modal needed. Form URL is hardcoded in each HTML file.// ─── WAITLIST ───
-// All waitlist buttons now link directly to the Google Form.
-// This function is kept as a fallback for any inline onclick calls.
-const WAITLIST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfl36Ju1GEhxDp_DQxJhy9M5VjSV1w_sfozzC5H5cOTIx_o2g/viewform?usp=sf_link";
-
-function openWaitlist(service) {
-  window.open(WAITLIST_URL, '_blank', 'noopener,noreferrer');
-}
-// Legacy stubs — no longer used
-function closeWaitlist() {}
-function submitWaitlist() { openWaitlist(''); }
