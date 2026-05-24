@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Book a Travel Health Consultation | Dr. Sunny B, PharmD | California</title>
-<meta name="description" content="Reserve a virtual travel health consultation with Dr. Sunny B, PharmD. Intake sent automatically, plus travel-medication and naloxone furnishing for patients across California."/>
+<meta name="description" content="Request a virtual travel health or naloxone consultation with Dr. Sunny B, PharmD, using a quick on-site form. Travel-medication and naloxone furnishing for patients across California."/>
 <meta property="og:title" content="Book a Travel Health Consultation | Dr. Sunny B, PharmD"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://drsunnybrph.com/book.html"/>
@@ -68,6 +68,7 @@
   <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a class="nav-link" href="index.html" data-nav="home">Home</a></li>
     <li class="nav-item"><a class="nav-link" href="travel-health.html" data-nav="travel">Travel Health</a></li>
+    <li class="nav-item"><a class="nav-link" href="naloxone.html" data-nav="naloxone">Naloxone</a></li>
     <li class="nav-item"><a class="nav-link" href="about.html" data-nav="about">About</a></li>
     <li class="nav-item"><a class="nav-link" href="pay.html" data-nav="pay">Pay</a></li>
     <li class="nav-item"><a class="nav-link nav-cta" href="book.html" data-nav="book"><i class="fa-solid fa-calendar-check"></i> Book Now</a></li>
@@ -79,7 +80,7 @@
     <div class="page-hero-inner">
       <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Scheduling</span>
       <h1>Reserve Your <em>Consultation</em></h1>
-      <p>Choose the consult that fits your trip. You'll pick a time, prepay securely, and receive your intake form and video link automatically — all in one short flow. Available in English, Punjabi, and Hindi for travelers across California.</p>
+      <p>Choose your consult and send a quick request below — no health details needed here. I'll reply with a secure link to schedule, pay, and complete your private intake. Available in English, Punjabi, and Hindi for patients across California.</p>
     </div>
   </div>
 
@@ -91,10 +92,8 @@
         <h2 class="section-title">Three Ways to <em>Travel Ready</em></h2>
       </div>
 
-      <!-- BOOKING LINKS: until your Square Appointments account is live, each button opens a pre-filled
-           booking-request email so clicks never hit a dead page. When ready, replace the mailto: href on
-           each button below with your real Square Appointments link for that tier, e.g.
-           href="https://book.squareup.com/appointments/YOUR-REAL-SLUG" target="_blank" rel="noopener" -->
+      <!-- The pricing cards below jump to the on-site booking-request form (selectService).
+           The form submits to your Google Sheet (set BOOKING_ENDPOINT in script.js). -->
       <div class="bk-grid">
         <div class="bk-card">
           <div class="bk-icon"><i class="fa-solid fa-earth-americas"></i></div>
@@ -108,7 +107,7 @@
             <li><i class="fa-solid fa-check"></i>Written travel plan</li>
             <li><i class="fa-solid fa-check"></i>Eligible medication furnishing</li>
           </ul>
-          <a class="bk-btn" href="mailto:drsunnybrph@gmail.com?subject=Booking%20Request%20%E2%80%94%20Standard%20Consult%20%2830%20min%29&body=Hi%20Dr.%20Sunny%20B%2C%0A%0AI%27d%20like%20to%20book%20the%20Standard%20Consult%20%2830%20min%29.%0A%0APreferred%20dates%2Ftimes%3A%0ADestination%28s%29%3A%0ATravel%20dates%3A%0APreferred%20pharmacy%3A%0A"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
+          <a class="bk-btn" href="#bookForm" onclick="selectService('Standard Travel Consult');return false;"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
         </div>
 
         <div class="bk-card feat">
@@ -125,7 +124,7 @@
             <li><i class="fa-solid fa-check"></i>Full travel-medication furnishing</li>
             <li><i class="fa-solid fa-check"></i>Follow-up message included</li>
           </ul>
-          <a class="bk-btn" href="mailto:drsunnybrph@gmail.com?subject=Booking%20Request%20%E2%80%94%20Comprehensive%20Consult%20%2860%20min%29&body=Hi%20Dr.%20Sunny%20B%2C%0A%0AI%27d%20like%20to%20book%20the%20Comprehensive%20Consult%20%2860%20min%29.%0A%0APreferred%20dates%2Ftimes%3A%0ADestination%28s%29%3A%0ATravel%20dates%3A%0APreferred%20pharmacy%3A%0A"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
+          <a class="bk-btn" href="#bookForm" onclick="selectService('Comprehensive Travel Consult');return false;"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
         </div>
 
         <div class="bk-card">
@@ -139,14 +138,52 @@
             <li><i class="fa-solid fa-check"></i>Pediatric considerations</li>
             <li><i class="fa-solid fa-check"></i>Shared written summary</li>
           </ul>
-          <a class="bk-btn" href="mailto:drsunnybrph@gmail.com?subject=Booking%20Request%20%E2%80%94%20Family%20Package%20%2860%20min%2C%20up%20to%204%29&body=Hi%20Dr.%20Sunny%20B%2C%0A%0AI%27d%20like%20to%20book%20the%20Family%20Package%20%2860%20min%2C%20up%20to%204%29.%0A%0APreferred%20dates%2Ftimes%3A%0ADestination%28s%29%3A%0ATravel%20dates%3A%0APreferred%20pharmacy%3A%0A"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
+          <a class="bk-btn" href="#bookForm" onclick="selectService('Family Travel Package');return false;"><i class="fa-solid fa-calendar-check"></i> Reserve This Consult</a>
         </div>
       </div>
 
       <div class="bk-secure">
-        <span><i class="fa-solid fa-lock"></i> Secure prepayment at booking</span>
-        <span><i class="fa-solid fa-bell"></i> Instant confirmation &amp; reminders</span>
+        <span><i class="fa-solid fa-shield-halved"></i> No health info on this form</span>
+        <span><i class="fa-solid fa-reply"></i> Reply within 1 business day</span>
         <span><i class="fa-solid fa-video"></i> Private video visit</span>
+      </div>
+
+      <div class="bf-wrap" id="bookForm">
+        <div class="bf-head">
+          <span class="eyebrow">Booking Request</span>
+          <h2 class="section-title" style="margin-bottom:6px;">Request Your <em>Consult</em></h2>
+          <p style="font-size:.85rem;color:var(--gray);line-height:1.65;max-width:460px;margin:0 auto;">Tell me which consult you'd like and when works. I'll reply by email with a secure link to schedule, pay, and complete your private intake. Under a minute, and no health details needed here.</p>
+        </div>
+        <div class="bf-grid">
+          <div class="bf-field full">
+            <label for="bf-service">Service <span class="req">*</span></label>
+            <select class="bf-select" id="bf-service" name="service" required>
+              <optgroup label="Travel Health">
+                <option value="Standard Travel Consult ($75, 30 min)" selected>Standard Travel Consult — $75 (30 min)</option>
+                <option value="Comprehensive Travel Consult ($125, 60 min)">Comprehensive Travel Consult — $125 (60 min)</option>
+                <option value="Family Travel Package ($199, up to 4)">Family Travel Package — $199 (up to 4)</option>
+              </optgroup>
+              <optgroup label="Naloxone Furnishing">
+                <option value="Naloxone — Individual ($29, 15 min)">Naloxone — Individual — $29 (15 min)</option>
+                <option value="Naloxone — Household / Caregiver ($49, up to 4)">Naloxone — Household / Caregiver — $49 (up to 4)</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="bf-field"><label for="bf-name">Full name <span class="req">*</span></label><input class="bf-input" id="bf-name" name="name" type="text" autocomplete="name" required/></div>
+          <div class="bf-field"><label for="bf-email">Email <span class="req">*</span></label><input class="bf-input" id="bf-email" name="email" type="email" autocomplete="email" required/></div>
+          <div class="bf-field"><label for="bf-phone">Phone (optional)</label><input class="bf-input" id="bf-phone" name="phone" type="tel" autocomplete="tel"/></div>
+          <div class="bf-field"><label for="bf-lang">Preferred language</label><select class="bf-select" id="bf-lang" name="language"><option>English</option><option>Punjabi</option><option>Hindi</option></select></div>
+          <div class="bf-field"><label for="bf-when">Timeframe</label><select class="bf-select" id="bf-when" name="timeframe"><option>Within a few days</option><option>Within 1 week</option><option>Within 2 weeks</option><option>Just exploring</option></select></div>
+          <div class="bf-field"><label for="bf-tod">Preferred time of day</label><select class="bf-select" id="bf-tod" name="time_of_day"><option>No preference</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          <div class="bf-field full"><label for="bf-pharm">Preferred pickup pharmacy (optional)</label><input class="bf-input" id="bf-pharm" name="pharmacy" type="text" placeholder="e.g., CVS Fairfield, or your local pharmacy"/></div>
+          <div class="bf-ack">
+            <input type="checkbox" id="bf-ack" name="ack"/>
+            <label for="bf-ack">I understand this form is for <strong>scheduling only</strong>. I will <strong>not</strong> include any health information, symptoms, medications, or medical history here — my private intake is completed separately and securely.</label>
+          </div>
+          <div class="bf-status" id="bf-status"></div>
+          <button class="bf-submit" type="button" onclick="submitBooking()"><i class="fa-solid fa-paper-plane"></i> Send Booking Request</button>
+          <p class="bf-priv">No health information is collected on this form. Consultations and furnishing are for patients physically located in California.</p>
+        </div>
       </div>
 
       <div class="bk-rail">
@@ -155,10 +192,10 @@
           <h2 class="section-title">From Reserve to <em>Bon Voyage</em></h2>
         </div>
         <div class="bk-steps">
-          <div class="bk-step"><div class="bk-step-n">01</div><h4>Reserve &amp; Prepay</h4><p>Pick a time and pay securely by card. You'll get instant confirmation and reminders.</p></div>
-          <div class="bk-step"><div class="bk-step-n">02</div><h4>Complete Intake</h4><p>A secure pre-travel health form arrives by email and is reviewed before your visit.</p></div>
-          <div class="bk-step"><div class="bk-step-n">03</div><h4>Video Consult</h4><p>Your visit with Dr. Sunny B — destination risk assessment in English, Punjabi, or Hindi.</p></div>
-          <div class="bk-step"><div class="bk-step-n">04</div><h4>Travel Ready</h4><p>Written plan, vaccine referrals, and eligible medications sent to your chosen pharmacy.</p></div>
+          <div class="bk-step"><div class="bk-step-n">01</div><h4>Send Request</h4><p>Fill the short form — contact and timing only, no health details. Under a minute.</p></div>
+          <div class="bk-step"><div class="bk-step-n">02</div><h4>Schedule &amp; Pay</h4><p>I email you a secure link to lock in a time and pay by card.</p></div>
+          <div class="bk-step"><div class="bk-step-n">03</div><h4>Secure Intake</h4><p>You complete your private health intake in a HIPAA-secure portal before the visit.</p></div>
+          <div class="bk-step"><div class="bk-step-n">04</div><h4>Visit &amp; Done</h4><p>Your video consult, then your plan and any eligible medications sent to your pharmacy.</p></div>
         </div>
       </div>
 
@@ -182,6 +219,7 @@
         <li><a href="travel-health.html"><i class="fa-solid fa-plane-departure"></i>Consultations</a></li>
         <li><a href="travel-health.html#pricing"><i class="fa-solid fa-tag"></i>Pricing</a></li>
         <li><a href="travel-health.html#how"><i class="fa-solid fa-list-check"></i>How It Works</a></li>
+        <li><a href="naloxone.html"><i class="fa-solid fa-kit-medical"></i>Naloxone Furnishing</a></li>
       </ul></div>
       <div class="footer-col"><h4>Practice</h4><ul>
         <li><a href="about.html"><i class="fa-solid fa-user-doctor"></i>About Dr. Sunny B</a></li>
