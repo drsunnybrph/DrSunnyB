@@ -47,14 +47,13 @@
     <div class="container">
       <div class="about-wrap">
         <div class="about-photo-panel" id="aboutPhotoPanel">
-          <img id="aboutPhoto" src="sunny.jpg" alt="Dr. Sunny B, PharmD"
-            onerror="this.style.display='none';document.getElementById('aboutFallback').style.display='flex'"/>
+          <div class="about-slides" id="aboutSlides"></div>
           <div class="about-fallback" id="aboutFallback">
             <i class="fa-solid fa-user-doctor"></i>
-            <p>Add your photo as<br/><strong>sunny.jpg</strong></p>
+            <p>Add your photos<br/>(set them in <strong>script.js</strong> &rarr; ABOUT_SLIDES)</p>
           </div>
           <div class="about-photo-overlay"></div>
-          <div class="about-photo-tag"><i class="fa-solid fa-location-dot"></i> California</div>
+          <div class="about-photo-tag" id="aboutPhotoTag"><i class="fa-solid fa-location-dot"></i> <span id="aboutPhotoCaption">Lisbon, Portugal</span></div>
         </div>
         <div class="about-text-panel">
           <div class="cred-badges">
@@ -71,6 +70,7 @@
           <p>Dr. Sunny B, PharmD is a licensed emergency-medicine pharmacist in California, and Dr. Sunny B Travel Health is his independent travel-health practice. Years on the front line of emergency care taught him how often a preventable problem abroad becomes a serious one at home. Travel medicine is the answer: a short, focused consultation that gets travelers the right guidance and the right medications before they leave.</p>
           <p>The practice operates as telehealth for patients across California, with deep roots in <strong>Solano County</strong> (Fairfield, Vacaville, Suisun City) and <strong>Ventura County</strong> (Simi Valley, Oxnard, Thousand Oaks). Consultations are available in English, Punjabi, and Hindi — serving the South Asian diaspora and the VFR (Visiting Friends &amp; Relatives) travel market, a high-risk corridor that benefits from culturally fluent, destination-specific care.</p>
           <p>Travel medications are furnished under independent California pharmacist authority — <strong>Business &amp; Professions Code § 4052(a)(10)(A)(3)</strong> and <strong>16 CCR § 1746.5</strong>. This means eligible CDC-recommended travel medications that don't require a diagnosis can be furnished directly, with no separate physician visit and no collaborative practice agreement. Your primary care provider is notified within 14 days of any medication furnished, as the regulation requires.</p>
+          <p>Beyond travel, I also furnish <strong>naloxone</strong> &mdash; the opioid-overdose rescue medication &mdash; under California's statewide protocol (<strong>BPC § 4052.01</strong> and <strong>16 CCR § 1746.3</strong>). It comes straight out of my time in the emergency department: a simple kit at home protects young people after a night out and older adults managing pain on several medications alike. <a href="naloxone.html" style="color:var(--emerald2);font-weight:600;">Learn about naloxone furnishing &rarr;</a></p>
           <div class="lang-badge-light"><i class="fa-solid fa-comments"></i> English · Punjabi · ਪੰਜਾਬੀ · Hindi · हिन्दी</div>
           <div class="about-stats" style="margin-top:20px;">
             <div class="astat"><span class="astat-num">PharmD</span><span class="astat-label">Doctorate</span></div>

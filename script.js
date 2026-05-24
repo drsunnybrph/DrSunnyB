@@ -136,3 +136,55 @@ function submitBooking() {
     bfStatus('err', 'Sorry — the form could not send just now. Please email drsunnybrph@gmail.com and I\'ll get you scheduled.');
   });
 }
+
+
+// ─── ABOUT PHOTO SLIDESHOW (cross-fades every 4s) ───
+// Drop photo files next to the .html and add a line per photo below.
+const ABOUT_SLIDES = [
+  { src: 'sunny.jpg',    caption: 'Lisbon, Portugal' },
+  { src: 'japan.jpg',    caption: 'Hakone, Japan' },
+  { src: 'rome.jpg',     caption: 'Rome, Italy' },
+  { src: 'guatape.jpg',  caption: 'Guatapé, Colombia' },
+  { src: 'positano.jpg', caption: 'Positano, Amalfi Coast' },
+  { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand' },
+];
+
+function initAboutSlideshow() {
+  const wrap = document.getElementById('aboutSlides');
+  if (!wrap) return;
+  const fallback = document.getElementById('aboutFallback');
+  const capEl = document.getElementById('aboutPhotoCaption');
+  const tag = document.getElementById('aboutPhotoTag');
+  let pending = ABOUT_SLIDES.length;
+
+  function setCaption(el) {
+    if (capEl) capEl.textContent = el.dataset.caption || '';
+    if (tag) tag.style.display = el.dataset.caption ? '' : 'none';
+  }
+  function begin() {
+    const slides = Array.prototype.slice.call(wrap.querySelectorAll('.about-slide'));
+    if (slides.length === 0) { if (fallback) fallback.style.display = 'flex'; return; }
+    slides[0].classList.add('active');
+    setCaption(slides[0]);
+    if (slides.length < 2) return;
+    let i = 0;
+    setInterval(function () {
+      slides[i].classList.remove('active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('active');
+      setCaption(slides[i]);
+    }, 4000);
+  }
+  if (pending === 0) { begin(); return; }
+  ABOUT_SLIDES.forEach(function (s) {
+    const el = document.createElement('img');
+    el.className = 'about-slide';
+    el.alt = 'Dr. Sunny B';
+    el.dataset.caption = s.caption || '';
+    el.addEventListener('load', function () { if (--pending === 0) begin(); });
+    el.addEventListener('error', function () { if (el.parentNode) el.parentNode.removeChild(el); if (--pending === 0) begin(); });
+    el.src = s.src;
+    wrap.appendChild(el);
+  });
+}
+document.addEventListener('DOMContentLoaded', initAboutSlideshow);
