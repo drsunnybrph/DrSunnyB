@@ -138,8 +138,8 @@ function submitBooking() {
 }
 
 
-// ─── ABOUT PHOTO SLIDESHOW (cross-fades every 4s) ───
-// Drop photo files next to the .html and add a line per photo below.
+// ─── ABOUT TRAVEL GALLERY (full-width strip of destination photos) ───
+// Edit a line per photo. Files sit next to the .html. Order = left-to-right.
 const ABOUT_SLIDES = [
   { src: 'sunny.jpg',    caption: 'Lisbon, Portugal' },
   { src: 'japan.jpg',    caption: 'Hakone, Japan' },
@@ -149,49 +149,24 @@ const ABOUT_SLIDES = [
   { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand' },
 ];
 
-function initAboutSlideshow() {
-  const wrap = document.getElementById('aboutSlides');
-  if (!wrap) return;
-  const fallback = document.getElementById('aboutFallback');
-  const capEl = document.getElementById('aboutPhotoCaption');
-  const tag = document.getElementById('aboutPhotoTag');
-  let pending = ABOUT_SLIDES.length;
-
-  function setCaption(el) {
-    if (capEl) capEl.textContent = el.dataset.caption || '';
-    if (tag) tag.style.display = el.dataset.caption ? '' : 'none';
-  }
-  function begin() {
-    const slides = Array.prototype.slice.call(wrap.querySelectorAll('.about-slide'));
-    if (slides.length === 0) { if (fallback) fallback.style.display = 'flex'; return; }
-    slides[0].classList.add('active');
-    setCaption(slides[0]);
-    if (slides.length < 2) return;
-    let i = 0;
-    setInterval(function () {
-      slides[i].classList.remove('active');
-      i = (i + 1) % slides.length;
-      slides[i].classList.add('active');
-      setCaption(slides[i]);
-    }, 4000);
-  }
-  if (pending === 0) { begin(); return; }
+function initAboutGallery() {
+  const wrap = document.getElementById('aboutGallery');
+  if (!wrap || typeof ABOUT_SLIDES === 'undefined') return;
   ABOUT_SLIDES.forEach(function (s) {
-    const slide = document.createElement('div');
-    slide.className = 'about-slide';
-    slide.dataset.caption = s.caption || '';
-    const bg = document.createElement('div');
-    bg.className = 'about-slide-bg';
-    bg.style.backgroundImage = 'url("' + s.src + '")';
-    const fg = document.createElement('img');
-    fg.className = 'about-slide-fg';
-    fg.alt = s.caption || 'Travel';
-    fg.addEventListener('load', function () { if (--pending === 0) begin(); });
-    fg.addEventListener('error', function () { if (slide.parentNode) slide.parentNode.removeChild(slide); if (--pending === 0) begin(); });
-    fg.src = s.src;
-    slide.appendChild(bg);
-    slide.appendChild(fg);
-    wrap.appendChild(slide);
+    const fig = document.createElement('figure');
+    fig.className = 'gtile';
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.alt = s.caption || 'Travel';
+    img.addEventListener('error', function () { if (fig.parentNode) fig.parentNode.removeChild(fig); });
+    img.src = s.src;
+    fig.appendChild(img);
+    if (s.caption) {
+      const cap = document.createElement('figcaption');
+      cap.innerHTML = '<i class="fa-solid fa-location-dot"></i> ' + s.caption;
+      fig.appendChild(cap);
+    }
+    wrap.appendChild(fig);
   });
 }
-document.addEventListener('DOMContentLoaded', initAboutSlideshow);
+document.addEventListener('DOMContentLoaded', initAboutGallery);
