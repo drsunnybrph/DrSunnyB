@@ -141,12 +141,13 @@ function submitBooking() {
 // ─── ABOUT PHOTO SLIDESHOW (cross-fades every 4s) ───
 // Drop photo files next to the .html and add a line per photo below.
 const ABOUT_SLIDES = [
-  { src: 'sunny.jpg',    caption: 'Lisbon, Portugal' },
-  { src: 'japan.jpg',    caption: 'Hakone, Japan' },
-  { src: 'rome.jpg',     caption: 'Rome, Italy' },
-  { src: 'guatape.jpg',  caption: 'Guatapé, Colombia' },
-  { src: 'positano.jpg', caption: 'Positano, Amalfi Coast' },
-  { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand' },
+  // tf = per-photo framing: translate pans to the subject, scale zooms in. Tweak freely.
+  { src: 'sunny.jpg',    caption: 'Lisbon, Portugal',      tf: 'translate(-4%, -8%) scale(1.25)' },
+  { src: 'japan.jpg',    caption: 'Hakone, Japan',         tf: 'translate(0%, -8%) scale(1.22)' },
+  { src: 'rome.jpg',     caption: 'Rome, Italy',           tf: 'translate(10%, 6%) scale(1.35)' },
+  { src: 'guatape.jpg',  caption: 'Guatapé, Colombia',     tf: 'translate(-2%, -22%) scale(1.55)' },
+  { src: 'positano.jpg', caption: 'Positano, Amalfi Coast',tf: 'translate(-5%, 8%) scale(1.30)' },
+  { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand',    tf: 'translate(0%, -4%) scale(1.18)' },
 ];
 
 function initAboutSlideshow() {
@@ -181,6 +182,7 @@ function initAboutSlideshow() {
     el.className = 'about-slide';
     el.alt = 'Dr. Sunny B';
     el.dataset.caption = s.caption || '';
+    if (s.tf) el.style.transform = s.tf;
     el.addEventListener('load', function () { if (--pending === 0) begin(); });
     el.addEventListener('error', function () { if (el.parentNode) el.parentNode.removeChild(el); if (--pending === 0) begin(); });
     el.src = s.src;
