@@ -141,13 +141,12 @@ function submitBooking() {
 // ─── ABOUT PHOTO SLIDESHOW (cross-fades every 4s) ───
 // Drop photo files next to the .html and add a line per photo below.
 const ABOUT_SLIDES = [
-  // tf = per-photo framing: translate pans to the subject, scale zooms in. Tweak freely.
-  { src: 'sunny.jpg',    caption: 'Lisbon, Portugal',      tf: 'translate(-4%, -8%) scale(1.25)' },
-  { src: 'japan.jpg',    caption: 'Hakone, Japan',         tf: 'translate(0%, -8%) scale(1.22)' },
-  { src: 'rome.jpg',     caption: 'Rome, Italy',           tf: 'translate(10%, 6%) scale(1.35)' },
-  { src: 'guatape.jpg',  caption: 'Guatapé, Colombia',     tf: 'translate(-2%, -22%) scale(1.55)' },
-  { src: 'positano.jpg', caption: 'Positano, Amalfi Coast',tf: 'translate(-5%, 8%) scale(1.30)' },
-  { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand',    tf: 'translate(0%, -4%) scale(1.18)' },
+  { src: 'sunny.jpg',    caption: 'Lisbon, Portugal' },
+  { src: 'japan.jpg',    caption: 'Hakone, Japan' },
+  { src: 'rome.jpg',     caption: 'Rome, Italy' },
+  { src: 'guatape.jpg',  caption: 'Guatapé, Colombia' },
+  { src: 'positano.jpg', caption: 'Positano, Amalfi Coast' },
+  { src: 'mayabay.jpg',  caption: 'Maya Bay, Thailand' },
 ];
 
 function initAboutSlideshow() {
@@ -178,15 +177,21 @@ function initAboutSlideshow() {
   }
   if (pending === 0) { begin(); return; }
   ABOUT_SLIDES.forEach(function (s) {
-    const el = document.createElement('img');
-    el.className = 'about-slide';
-    el.alt = 'Dr. Sunny B';
-    el.dataset.caption = s.caption || '';
-    if (s.tf) el.style.transform = s.tf;
-    el.addEventListener('load', function () { if (--pending === 0) begin(); });
-    el.addEventListener('error', function () { if (el.parentNode) el.parentNode.removeChild(el); if (--pending === 0) begin(); });
-    el.src = s.src;
-    wrap.appendChild(el);
+    const slide = document.createElement('div');
+    slide.className = 'about-slide';
+    slide.dataset.caption = s.caption || '';
+    const bg = document.createElement('div');
+    bg.className = 'about-slide-bg';
+    bg.style.backgroundImage = 'url("' + s.src + '")';
+    const fg = document.createElement('img');
+    fg.className = 'about-slide-fg';
+    fg.alt = s.caption || 'Travel';
+    fg.addEventListener('load', function () { if (--pending === 0) begin(); });
+    fg.addEventListener('error', function () { if (slide.parentNode) slide.parentNode.removeChild(slide); if (--pending === 0) begin(); });
+    fg.src = s.src;
+    slide.appendChild(bg);
+    slide.appendChild(fg);
+    wrap.appendChild(slide);
   });
 }
 document.addEventListener('DOMContentLoaded', initAboutSlideshow);

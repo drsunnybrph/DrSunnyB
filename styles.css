@@ -327,5 +327,7 @@ footer{background:var(--forest);padding:52px 40px 24px;border-top:1px solid rgba
 
 /* ===== ABOUT PHOTO SLIDESHOW ===== */
 .about-slides{position:absolute;inset:0;}
-.about-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%;transform-origin:center;opacity:0;transition:opacity 1s ease;}
+.about-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;}
 .about-slide.active{opacity:1;}
+.about-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(24px) brightness(.7);transform:scale(1.18);}
+.about-photo-panel .about-slide-fg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
