@@ -1,42 +1,51 @@
-# Dr. Sunny B Travel Health — Website
+# Golden State Travel Rx — Website
 
-Static site for **Dr. Sunny B, PharmD** — California travel-medicine consultations,
-travel-medication furnishing, and naloxone furnishing (telehealth, CA only).
+Static site for **Golden State Travel Rx** — an independent California travel-medicine
+practice (telehealth, CA only): pre-travel consultations, travel-medication furnishing,
+and naloxone furnishing. Public provider name: **Dr. Sunny B, PharmD** — licensed California pharmacist (a Doctor of
+Pharmacy, not a medical doctor). Legal name + license # appear only in the clinical layer
+(Charm consent/intake, prescriptions, PCP notification), where the law requires them — not
+on the marketing pages.
 
-## Files (upload these to the repo root)
+## Files (upload to repo root)
 | File | What it is |
 |---|---|
 | `index.html` | Home |
 | `travel-health.html` | Travel consult services & pricing |
-| `naloxone.html` | Naloxone furnishing page (story, pricing, booking form) |
-| `about.html` | About the practice |
-| `book.html` | Booking page (on-site request form) |
+| `naloxone.html` | Naloxone furnishing page |
+| `about.html` | About the practice (names the pharmacist per §2054) |
+| `book.html` | Booking request form |
 | `pay.html` | Billing / payment |
-| `styles.css` | All styling |
-| `script.js` | Nav, mobile menu, copy buttons, **booking form → Google Sheet** |
-| `apps-script/` | Google Apps Script source — **runs in Google, not hosted here** (reference only) |
+| `styles.css` | All styling (Golden Gate palette lives in `:root`) |
+| `script.js` | Nav, mobile menu, booking form → Google Sheet, About gallery |
+| `sunny.jpg`, `japan.jpg`, `rome.jpg`, `guatape.jpg`, `positano.jpg`, `mayabay.jpg` | About gallery photos |
+| `CNAME` | Custom domain (see **Domain** below) |
 
-> Add your headshot as **`sunny.jpg`** in the repo root for the About page (it falls back gracefully if missing).
+## Branding / legal notes (read before launch)
+- Business name is impersonal: **Golden State Travel Rx**. The **provider** (Dr. Sunny B, PharmD) is named on the About page and in the footer §2054 line only —
+  this is the "name-forward, brand-impersonal" split, and it's required so patients can
+  identify their licensed pharmacist and can't mistake a PharmD for an MD.
+- Every page footer carries the §2054 disclosure ("a Doctor of Pharmacy, not a medical
+  doctor") and the furnishing authority (BPC §4052(a)(10)(A)(3), 16 CCR §1746.5; naloxone
+  under BPC §4052.01 / 16 CCR §1746.3). **Do not remove these.**
+- California cues are legally clean: original suspension-bridge line-art (not the Golden
+  Gate Bridge District logo), California-gold + international-orange color only. No state
+  seal, no Bear Flag artwork — both are restricted, so they were deliberately avoided.
+- Naloxone furnishing needs your **1-hour opioid-antagonist CE (16 CCR §1746.3)** on file
+  before going live.
+
+## Domain (do this in order — don't skip)
+`CNAME` is set to `goldenstatetravelrx.com`. Before that works:
+1. **Register `goldenstatetravelrx.com`** (Namecheap) — confirm the trademark/entity check first.
+2. Point DNS to GitHub Pages, then Settings → Pages → Custom domain → `goldenstatetravelrx.com`.
+3. **Until the domain is live, keep your old CNAME** (`www.drsunnybrph.com`) or the site's
+   custom domain will 404. The `github.io` URL keeps working regardless.
+
+## Still on the old identity (swap when ready — not blockers)
+- **Email:** still `drsunnybrph@gmail.com` (kept so contact works today). Migrate to
+  `hello@goldenstatetravelrx.com` once the domain + inbox exist, then find/replace it site-wide.
+- **Booking endpoint** in `script.js` is unchanged and still posts to your Bookings sheet.
+- Social handle references were removed (no live @goldenstatetravelrx handle yet — claim it).
 
 ## Hosting (GitHub Pages)
-1. Push these files to a repo.
-2. Settings → Pages → Build & deployment → Deploy from a branch → `main` / root → Save.
-3. Point your domain `drsunnybrph.com` at it (Pages → Custom domain) if desired.
-
-## Booking form
-`script.js` already contains your deployed `BOOKING_ENDPOINT` (the Apps Script `/exec` URL),
-so the form on `book.html` and `naloxone.html` posts to your **Bookings** tab and emails you.
-The form collects **no health information** — clinical intake happens in Charm.
-
-## Google Apps Script (in `apps-script/`, not part of the website)
-- `booking-to-sheet-COMBINED.gs` — Web App that receives the website form (lives in the Pre-Visit Responses sheet project).
-- `intake-form-builder.gs` — run once to build the Google pre-visit form.
-- `previsit-responses-handler.gs` — emails you on each Google-form submission.
-
-## ⚠️ Privacy notes
-- The booking `/exec` URL is visible in `script.js` by design (it's client-side). That's expected; it only
-  appends a row and emails you. If you get spam submissions later, add a simple honeypot field.
-- Public-facing pages intentionally show only "Dr. Sunny B, PharmD" — no legal name, license #, or NPI.
-
-## Compliance reminder
-Naloxone furnishing requires your **1-hour opioid-antagonist CE (16 CCR § 1746.3)** on file before going live.
+Push to repo root → Settings → Pages → Deploy from branch → `main` / root.

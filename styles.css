@@ -1,10 +1,13 @@
 :root{
-  --forest:#064E3B;--emerald:#065F46;--emerald2:#047857;--emerald3:#059669;--emerald4:#10B981;
-  --mint:#ECFDF5;--mint2:#D1FAE5;--orange:#EA580C;--orange2:#F97316;--orange3:#FED7AA;--orange4:#FFF7ED;
-  --slate:#0F2942;--slate2:#1E3A5F;--slate3:#EFF6FF;
-  --gray:#64748B;--gray2:#94A3B8;--gray3:#F8FAFC;--gray4:#E2E8F0;
-  --white:#FFFFFF;--cream:#F8FAF9;--text:#0F1A14;
-  --radius:16px;--shadow:0 2px 16px rgba(6,78,59,.08);--shadow2:0 8px 40px rgba(6,78,59,.14);
+  /* ===== Golden State / Golden Gate palette =====
+     deep Pacific teal base · California gold · Golden Gate international orange · warm sand */
+  --forest:#0C3A4B;   --emerald:#12556B;  --emerald2:#0B6076;  --emerald3:#12849B;  --emerald4:#E8AE4C;
+  --mint:#FBF3E2;      --mint2:#F1E1BE;    --orange:#C23B24;    --orange2:#E15A2B;   --orange3:#F4C9AC;  --orange4:#FCEEE6;
+  --slate:#123A54;--slate2:#1E5170;--slate3:#EAF3F7;
+  --gray:#5C6B72;--gray2:#93A2A8;--gray3:#F5F7F6;--gray4:#E4E9E8;
+  --white:#FFFFFF;--cream:#FAF6EE;--text:#1A1712;
+  --gold:#E8AE4C;--gold2:#D4922E;--ggorange:#C23B24;
+  --radius:16px;--shadow:0 2px 16px rgba(12,58,75,.09);--shadow2:0 8px 40px rgba(12,58,75,.15);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -368,3 +371,55 @@ footer{background:var(--forest);padding:52px 40px 24px;border-top:1px solid rgba
   .gtile{flex:0 0 64%;height:52vh;min-height:340px;scroll-snap-align:start;}
   .about-story{margin-top:40px;}
 }
+
+
+/* =================================================================
+   GOLDEN STATE TRAVEL RX — California rebrand enhancements
+   (bridge = signature; palette carried by tokens above)
+   ================================================================= */
+
+/* nav brand: international-orange bridge tile + gold Rx */
+.nav-brand-icon{background:linear-gradient(135deg,var(--orange2),var(--orange))!important;box-shadow:0 3px 10px rgba(194,59,36,.28);}
+.nav-brand-text{letter-spacing:.2px;}
+.nav-brand-text span{color:var(--gold2);}
+
+/* HERO — golden hour over the Pacific */
+.hero{background:linear-gradient(178deg,#0A3040 0%,#0C3A4B 34%,#12556B 60%,#2C6E70 80%,#7C5A3E 128%)!important;}
+.hero-glow{width:520px;height:520px;background:radial-gradient(circle,rgba(232,174,76,.42),rgba(232,174,76,.10) 45%,transparent 70%)!important;top:6%;right:12%;}      /* the sun */
+.hero-glow2{width:640px;height:420px;background:radial-gradient(circle,rgba(194,59,36,.20),transparent 70%)!important;bottom:-60px;left:20%;}
+.hero-fog{position:absolute;left:0;right:0;bottom:0;height:150px;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(250,246,238,.16),transparent);}
+.hero-bridge{position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none;line-height:0;
+  filter:drop-shadow(0 4px 14px rgba(0,0,0,.22));}
+.hero-bridge .ggb{width:100%;height:min(300px,42vh);display:block;}
+.hero-content{position:relative;z-index:3;}
+.hero h1 em{color:var(--gold);text-shadow:0 2px 20px rgba(232,174,76,.28);}
+.hero-eyebrow i,.lang-badge i,.county-tag i,.hero-stat-num,.hero-stat-num i{color:var(--gold)!important;}
+
+/* PAGE HERO — same golden-hour band + faint bridge line */
+.page-hero{background:linear-gradient(160deg,#0C3A4B 0%,#12556B 62%,#2C6E70 100%)!important;}
+.page-hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;z-index:0;pointer-events:none;opacity:.5;
+  background:no-repeat bottom/100% 120px url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='xMidYMax slice'><g stroke='%23E9663A' fill='none' stroke-linecap='round'><line x1='0' y1='104' x2='1440' y2='104' stroke-width='3'/><path d='M0,104 Q210,64 380,26 Q720,150 1060,26 Q1230,64 1440,104' stroke-width='3'/><g stroke-width='5'><line x1='380' y1='6' x2='380' y2='120'/><line x1='1060' y1='6' x2='1060' y2='120'/></g></g></svg>");}
+.page-hero-inner,.page-hero .disclaimer,.page-hero .no-shots-notice,.page-hero .lang-badge{position:relative;z-index:1;}
+.page-hero .eyebrow{color:var(--gold);}
+.page-hero h1 em{color:var(--gold);}
+
+/* schedule / rx-future dark boxes get the golden-hour gradient too */
+.schedule-box,.rx-future-box{background:linear-gradient(150deg,var(--forest),var(--emerald) 60%,#2C6E70)!important;}
+.schedule-box h2 em,.rx-future-box h3 em{color:var(--gold);}
+.rx-future-list li i,.schedule-box .eyebrow{color:var(--gold);}
+
+/* gallery caption pin → gold */
+.gtile figcaption i{color:var(--gold)!important;}
+
+/* CTA orange shadows re-tinted to Golden Gate orange */
+.btn-orange,.bf-submit,.btn-cta{box-shadow:0 8px 26px rgba(194,59,36,.32)!important;}
+.btn-orange:hover{box-shadow:0 12px 34px rgba(194,59,36,.42)!important;}
+.nav-cta{box-shadow:0 4px 14px rgba(194,59,36,.28)!important;}
+.featured-badge,.step-num{box-shadow:0 4px 12px rgba(18,132,155,.3);}
+
+/* a thin gold hairline under section eyebrows — subtle CA warmth */
+.section-title em{color:var(--orange);}
+
+@media(max-width:768px){ .hero-bridge .ggb{height:150px;} .hero-glow{width:300px;height:300px;} }
+@media(prefers-reduced-motion:reduce){ body{animation:none;} .gtile img{transition:none;} }
